@@ -1,0 +1,8 @@
+/target/
+/client/target/
+/server/target/
+/client/dist/
+/server/src/main/resources/static/
+/client/node/
+/client/node_modules/
+

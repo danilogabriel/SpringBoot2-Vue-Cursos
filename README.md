@@ -1,4 +1,4 @@
-cd# Simple App Using VueJS as Front End and Spring Boot 2 as the Server and to provide REST Service
+# Simple App Using VueJS as Front End and Spring Boot 2 as the Server and to provide REST Service
 
 ## What is the Use of This Repo
 This App is a Simple VueJS and Springboot 2 App which uses

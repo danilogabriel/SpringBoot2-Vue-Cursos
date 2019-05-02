@@ -60,7 +60,6 @@ public class AuthController {
         } else {
             if (reqLogin.getUsername().equals(usuarioDB.getUsername()) && reqLogin.getCuit().compareTo(usuarioDB.getCuit()) == 0) {
                 token = getJWTToken(reqLogin.getUsername());
-                LOGGER.info("Usuario logueado correctamente");
                 response.setMessage("Login exitoso");
                 response.setToken(token);
                 response.setUsuario(usuarioDB);

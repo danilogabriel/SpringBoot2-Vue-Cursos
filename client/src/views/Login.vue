@@ -1,29 +1,26 @@
 <template>
 	<div>
 		<div class="login-form" style="width: 30%;">
-			<h2 class="text-center">Ingreso</h2>       
+			<h3 class="text-center p-4">Ingreso a Propuestas de Capacitación</h3>       
 
-				<div style="max-width: 100%;">
-					<b-input-group append="@afip.gob.ar" class="mb-2 mr-2">
-					<b-form-input placeholder="usuario de e-mail" v-model="userLogin.username"></b-form-input>
-					</b-input-group>
-					<div class="text-danger">{{ validation.firstError('userLogin.username') }}</div>
+				<b-input-group append="@afip.gob.ar" class="mb-2 mr-2">
+				<b-form-input placeholder="usuario de e-mail" v-model="userLogin.username"></b-form-input>
+				</b-input-group>
+				<div class="text-danger">{{ validation.firstError('userLogin.username') }}</div>
 
-					<b-form-input class="mb-2 mr-2"
-						placeholder="N° legajo"
-						required 
-						v-model="userLogin.legajo" />
-					<div class="text-danger">{{ validation.firstError('userLogin.legajo') }}</div>
+				<b-form-input class="mb-2 mr-2"
+					placeholder="N° legajo"
+					required 
+					v-model="userLogin.legajo" />
+				<div class="text-danger">{{ validation.firstError('userLogin.legajo') }}</div>
 
-					<b-form-input class="mb-2 mr-2"
-						placeholder="CUIT / CUIL"
-						required 
-						v-model="userLogin.cuit" />
-					<div class="text-danger">{{ validation.firstError('userLogin.cuit') }}</div>
+				<b-form-input class="mb-2 mr-2"
+					placeholder="CUIT / CUIL"
+					required 
+					v-model="userLogin.cuit" />
+				<div class="text-danger">{{ validation.firstError('userLogin.cuit') }}</div>
 
-						<button type="submit" class="btn btn-primary btn-block" @click="login()" >Ingresar</button>
-				</div>
-			
+				<button type="submit" class="btn btn-primary btn-block" @click="login()" >Ingresar</button>		
 		</div>
 		<div class="text-center text-danger" v-if="$store.state.status">{{ $store.state.messageError }}</div>		
 	</div>
@@ -50,13 +47,13 @@ export default {
       'userLogin.legajo' : function (value) {
 		return Validator.value(value)
 						.required()
-						.integer('Debe ser un valor numérico');
+						.integer();
       },
       'userLogin.cuit' : function (value) {
 		return Validator.value(value)
 						.required()
 						.length(11, 'Debe ser numérico de 11 digitos')
-						.digit('Solo se aceptan dígitos');
+						.digit();
       }	  
     }, 	
 	methods: {

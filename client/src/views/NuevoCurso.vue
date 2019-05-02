@@ -10,47 +10,58 @@
               <b-input-group prepend="Titulo" class="mt-3">
                 <b-form-input v-model="curso.titulo"></b-form-input>
               </b-input-group>
+               <div class="text-danger">{{ validation.firstError('curso.titulo') }}</div>
 
               <b-input-group prepend="Tipo  de Capacitación" class="mt-3">
                 <b-form-select v-model="curso.tipo" :options="tipoCursoOptions"></b-form-select>
               </b-input-group>
+               <div class="text-danger">{{ validation.firstError('curso.tipo') }}</div>
 
               <b-input-group prepend="Categoría" class="mt-3">
                 <b-form-select v-model="curso.categoria" :options="categoriaOptions"></b-form-select>
               </b-input-group>
+               <div class="text-danger">{{ validation.firstError('curso.categoria') }}</div>
 
               <b-input-group prepend="Descripcion" class="mt-3">
                 <b-form-textarea id="textarea"  rows="3" max-rows="6" v-model="curso.descripcion"></b-form-textarea>
               </b-input-group>
+               <div class="text-danger">{{ validation.firstError('curso.descripcion') }}</div>
 
               <b-input-group prepend="Contenidos" class="mt-3">
                 <b-form-textarea id="textarea"  rows="3" max-rows="6" v-model="curso.contenidos"></b-form-textarea>
               </b-input-group>
+               <div class="text-danger">{{ validation.firstError('curso.contenidos') }}</div>
 
               <b-input-group prepend="Instructores" class="mt-3">
                 <b-form-textarea id="textarea"  rows="3" max-rows="6" v-model="curso.instructores"></b-form-textarea>
               </b-input-group>
+               <div class="text-danger">{{ validation.firstError('curso.instructores') }}</div>
 
-              <b-input-group prepend="Peril alumno" class="mt-3">
-                <b-form-select v-model="perfilSelected" :options="perfilOptions"></b-form-select>
+              <b-input-group prepend="Perfil alumno" class="mt-3">
+                <b-form-select v-model="curso.perfilAlumno" :options="perfilOptions"></b-form-select>
               </b-input-group>
+               <div class="text-danger">{{ validation.firstError('curso.titulo') }}</div>
 
               <b-input-group prepend="Cant. Horas" class="mt-3">
                 <b-form-input v-model="curso.cantHoras"></b-form-input>
               </b-input-group>
+               <div class="text-danger">{{ validation.firstError('curso.cantHoras') }}</div>
 
-               <div class="text-danger font-weight-bold">{{ validation.firstError('curso.cantHoras') }}</div>
-
-              <b-input-group prepend="Max. Asistentes" class="mt-3">
+              <b-input-group prepend="Max. Asistentes" class="mt-3 m">
                 <b-form-input v-model="curso.maxAlumnos"></b-form-input>
               </b-input-group>            
+               <div class="text-danger">{{ validation.firstError('curso.maxAlumnos') }}</div>
 
+              <div>
+                  <b-form-checkbox v-model="curso.publicado" name="check-button" switch class="mt-3">
+                    Publicar este curso</b>
+                  </b-form-checkbox>
+              </div>                  
         </b-col>
     </div>
 
     <div align="center">
         <b-button class="m-3 width: 200px;" style="m-3 width: 200px;"  variant="primary" @click="guardarTemporal()">Guardado Temporal</b-button>
-        <b-button style="m-3 width: 200px;"  variant="primary" @click="showModal()">Publicar</b-button>
         <b-button class="m-3 width: 200px;" style="m-3 width: 200px;"  variant="danger" @click="showModal()">Eliminar</b-button>
         <b-button style="m-3 width: 200px;"  variant="primary" @click="goToHome()">Volver</b-button>
     </div>
@@ -82,13 +93,13 @@ export default {
     data() {
         return {
             curso: {
-                "titulo": "",
-                "tipo": "",
-                "categoria": "",
-                "descripcion": "",
-                "contenidos": "",
-                "instructores": "",
-                "perfilAlumno": "",
+                "titulo": null,
+                "tipo": null,
+                "categoria": null,
+                "descripcion": null,
+                "contenidos": null,
+                "instructores": null,
+                "perfilAlumno": null,
                 "cantHoras": null,
                 "maxAlumnos": null,
                 "publicado": false
@@ -119,43 +130,74 @@ export default {
                 { value: 'VARIOS', text: 'Varios' },
             ],
             perfilSelected: null,
-
             mailAConfirmar: "",
             cursoSeleccionado: { },
-
         }
-    },
+    },  
     validators: {
-      'curso.cantHoras' : function (value) {
-        return Validator.value(value).required().integer('Debe ser un valor numérico entero');
-      }
+      'curso.titulo': function (value) {
+        return Validator.value(value).required().regex('^[A-Za-z ]*$', 'Debe ingresar solo caracteres alfabéticos');
+      },
+      'curso.tipo': function (value) {
+        return Validator.value(value).required();
+      },
+      'curso.categoria': function (value) {
+        return Validator.value(value).required();
+      },
+      'curso.descripcion': function (value) {
+        return Validator.value(value).required();
+      },
+      'curso.contenidos': function (value) {
+        return Validator.value(value).required();
+      },
+      'curso.instructores': function (value) {
+        return Validator.value(value).required();
+      },
+      'curso.perfilAlumno': function (value) {
+        return Validator.value(value).required();
+      },
+      'curso.cantHoras': function (value) {
+        return Validator.value(value).required().integer();
+      },
+      'curso.maxAlumnos': function (value) {
+        return Validator.value(value).required().integer();
+      }      
     },    
     methods: {
-        guardarTemporal() {
-				this.$store.dispatch('createCurso', this.curso)
-												.then(() => this.$router.push('/'))
-												.catch(err => console.log(err))
-		},
-        handleConfirmModal() {
-            console.log("confirm")
-            
-            this.$nextTick(() => {
-
-                this.hideModal()
-                this.goToHome()
-
-            // Wrapped in $nextTick to ensure DOM is rendered before closing
-            })
-        },
-        showModal() {
-            this.$refs['confirmacion-modal'].show()
-        },
-        hideModal() {
-            this.$refs['confirmacion-modal'].hide()
-        },        
-        goToHome() {
-            this.$router.push("/")
-        }
+      async guardarTemporal() {
+          try {
+            let esValido = await this.$validate()
+            if (esValido) {							
+                await this.$store.dispatch('createCurso', this.curso)
+                this.$router.push('/')
+            } else {
+                this.$bvToast.toast('Hay errores en el formulario y no es posible enviar la información', {
+                  title: 'Advertencia',
+                  variant: 'danger',
+                  toaster: 'b-toaster-top-center',
+                  solid: true
+                })   
+            }
+          } catch (error) {
+            console.log(error)
+          }
+      },
+      handleConfirmModal() {         
+          this.$nextTick(() => {
+              this.hideModal()
+              this.goToHome()
+          // Wrapped in $nextTick to ensure DOM is rendered before closing
+          })
+      },
+      showModal() {
+          this.$refs['confirmacion-modal'].show()
+      },
+      hideModal() {
+          this.$refs['confirmacion-modal'].hide()
+      },        
+      goToHome() {
+          this.$router.push("/")
+      }
     },
     components: {
         NavigationBar

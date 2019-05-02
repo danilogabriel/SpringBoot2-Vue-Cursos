@@ -32,7 +32,8 @@ public class CursoController {
 
     @RequestMapping
     public List<Curso> getCursos() {
-        return repoCurso.findAll();
+        LOGGER.info("Obtener solo cursos publicados");
+        return repoCurso.findByPublicadoTrue();
     }
 
     @PostMapping

@@ -63,7 +63,7 @@ export default {
 
 				if (esValido) {							
 					await this.$store.dispatch('login', this.userLogin)
-					this.$router.push('/')
+					this.$router.push('/|')
 				}
 			} catch (error) {
 				console.log(error)

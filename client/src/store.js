@@ -42,7 +42,7 @@ const store =  new Vuex.Store({
 	},    
 	actions: {
 
-        login({commit}, userLogin){
+        async login({commit}, userLogin){
             return new Promise((resolve, reject) => {
               //reject("error forzado")
               commit('auth_request')      
@@ -61,7 +61,7 @@ const store =  new Vuex.Store({
                             commit('auth_error', "Error interno del servidor")
                             console.error(error);
                         });
-            })
+            })            
         },
         logout({commit}){
             return new Promise((resolve, reject) => {

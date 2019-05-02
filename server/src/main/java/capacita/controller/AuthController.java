@@ -3,6 +3,7 @@ package capacita.controller;
 import capacita.model.Usuario;
 import capacita.repository.UsuarioRepository;
 
+import capacita.services.UsuarioService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.slf4j.Logger;
@@ -15,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
@@ -30,6 +32,9 @@ public class AuthController {
     @Autowired
     private UsuarioRepository repoUsuario;
 
+    @Autowired
+    private UsuarioService usuarioService;
+
 
     //-------------  JWT PARAMETERS ------------
     @Value("${jwt.expiration}")
@@ -40,6 +45,8 @@ public class AuthController {
 
     //@Autowired
     //private BCryptPasswordEncoder bCryptPasswordEncoder;
+    //BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    //String hashedPassword = passwordEncoder.encode(password);
 
     @PostMapping("/login")
     public ResponseEntity<ResponseLogin> login(@RequestBody RequestLogin reqLogin){
@@ -49,7 +56,7 @@ public class AuthController {
         ResponseLogin response = new ResponseLogin(null, null , null);
 
         try{
-            usuarioDB = repoUsuario.findByLegajo(reqLogin.getLegajo());
+            usuarioDB = usuarioService.findUsuarioByLegajo(reqLogin.getLegajo());
             if (usuarioDB == null) throw new Exception("Usuario legajo: " + reqLogin.getLegajo() + " not found");
         }catch(Exception e){
             LOGGER.error("Error: {}", e.getMessage());
@@ -59,8 +66,14 @@ public class AuthController {
             response.setMessage("No existe usuario con legajo " + reqLogin.getLegajo());
         } else {
             if (reqLogin.getUsername().equals(usuarioDB.getUsername()) && reqLogin.getCuit().compareTo(usuarioDB.getCuit()) == 0) {
+
+                if (usuarioDB.getPassword() != null){
+                    response.setMessage("PASSWORD_REQUIRED");
+                } else {
+
+                    response.setMessage("Login exitoso");
+                }
                 token = getJWTToken(reqLogin.getUsername());
-                response.setMessage("Login exitoso");
                 response.setToken(token);
                 response.setUsuario(usuarioDB);
             } else {
@@ -71,7 +84,20 @@ public class AuthController {
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
+    @PostMapping("/updatepass")
+    public ResponseEntity<String> updatePass(@RequestParam Integer legajo, @RequestParam String password) {
 
+        String message=null;
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String hashedPassword = passwordEncoder.encode(password);
+
+        if ( usuarioService.setPassword(legajo, hashedPassword) )
+            message = "Password actualizada correctamente";
+        else
+            message = "El password no se puedo actualizar";
+
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
 
     private String getJWTToken(String username) {
 

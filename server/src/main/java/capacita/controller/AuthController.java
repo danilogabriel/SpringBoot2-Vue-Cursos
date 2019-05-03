@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
@@ -67,7 +68,7 @@ public class AuthController {
         } else {
             if (reqLogin.getUsername().equals(usuarioDB.getUsername()) && reqLogin.getCuit().compareTo(usuarioDB.getCuit()) == 0) {
 
-                if (usuarioDB.getPassword() != null){
+                if (usuarioDB.getPassword() == null){
                     response.setMessage("PASSWORD_REQUIRED");
                 } else {
 
@@ -85,11 +86,13 @@ public class AuthController {
     }
 
     @PostMapping("/updatepass")
-    public ResponseEntity<String> updatePass(@RequestParam Integer legajo, @RequestParam String password) {
+    public ResponseEntity<String> updatePass(@RequestBody Map<String, String> params) {
+
+        Integer legajo = Integer.valueOf(params.get("legajo"));
 
         String message=null;
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-        String hashedPassword = passwordEncoder.encode(password);
+        String hashedPassword = passwordEncoder.encode(params.get("password"));
 
         if ( usuarioService.setPassword(legajo, hashedPassword) )
             message = "Password actualizada correctamente";

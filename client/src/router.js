@@ -5,6 +5,7 @@ import Login from './views/Login.vue'
 import Home from './views/Home.vue'
 import DetalleCurso from './views/DetalleCurso.vue'
 import NuevoCurso from './views/NuevoCurso.vue'
+import SetPassword from './views/SetPassword.vue'
 
 
 Vue.use(Router)
@@ -25,6 +26,16 @@ const router =  new Router({
       component: Login
     },    
     {
+
+      path: '/acceso', 
+      name: 'acceso' , 
+      component: SetPassword, 
+      props: true  
+  
+      // path: '/acceso',
+      // name: 'acceso',
+      // component: SetPassword
+    },       {
       path: '/detallecurso',
       name: 'detallecurso',
       component: DetalleCurso,

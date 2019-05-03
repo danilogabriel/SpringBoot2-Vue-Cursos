@@ -50,10 +50,10 @@ const store =  new Vuex.Store({
                         .then(resp => {
                             const token = resp.data.token
                             const usuario = resp.data.usuario                            
-                            if (usuario != null) {
+                            if (usuario != null) {                                
                                 this._vm.$http.defaults.headers.common['Authorization'] = token
                                 commit('auth_success', resp.data)
-                                resolve(resp)                                                
+                                resolve(resp.data)                                                
                             } else {
                                 commit('auth_error', resp.data.message)    
                             }

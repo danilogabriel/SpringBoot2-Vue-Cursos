@@ -61,7 +61,7 @@
     </div>
 
     <div align="center">
-        <b-button class="m-3 width: 200px;" style="m-3 width: 200px;"  variant="primary" @click="guardarTemporal()">Guardado Temporal</b-button>
+        <b-button class="m-3 width: 200px;" style="m-3 width: 200px;"  variant="primary" @click="guardar()">Guardar</b-button>
         <b-button class="m-3 width: 200px;" style="m-3 width: 200px;"  variant="danger" @click="showModal()">Eliminar</b-button>
         <b-button style="m-3 width: 200px;"  variant="primary" @click="goToHome()">Volver</b-button>
     </div>
@@ -86,24 +86,33 @@ import NavigationBar from '@/components/NavigationBar.vue'
 import {Validator} from 'simple-vue-validator'
 
 export default {
-    name: 'DetalleCurso',
+    name: 'FormCurso',
+    props: {
+      curso: {
+        type: Object,
+        required: false,
+        default: function () {
+          return { 
+            "titulo": null,
+            "tipo": null,
+            "categoria": null,
+            "descripcion": null,
+            "contenidos": null,
+            "instructores": null,
+            "perfilAlumno": null,
+            "cantHoras": null,
+            "maxAlumnos": null,
+            "publicado": false                       
+          }
+        }
+      }
+    }, 
     mounted() {
         this.cursoSeleccionado = this.$store.getters.cursoSeleccionado
     },
     data() {
         return {
-            curso: {
-                "titulo": null,
-                "tipo": null,
-                "categoria": null,
-                "descripcion": null,
-                "contenidos": null,
-                "instructores": null,
-                "perfilAlumno": null,
-                "cantHoras": null,
-                "maxAlumnos": null,
-                "publicado": false
-            },
+            
             tipoCursoOptions: [
                 { value: null, text: 'Seleccione tipo de Curso' },
                 { value: 'Curso', text: 'Curso' },
@@ -115,19 +124,22 @@ export default {
 
             categoriaOptions: [
                 { value: null, text: 'Seleccione categoría' },
-                { value: 'Desarrollo', text: 'Desarrollo' },
-                { value: 'Databases', text: 'Databases' },
-                { value: 'Testing', text: 'Testing' },
-                { value: 'Operaciones', text: 'Operaciones'}
+                { value: 'WEB', text: 'Desarrollo Web' },
+                { value: 'DB', text: 'Bases de Datos' },
+                { value: 'TEST', text: 'Testing' },
+                { value: 'FRONT', text: 'Front End'},
+                { value: 'TOOLS', text: 'Herramientas'},
+                { value: 'OPER', text: 'Operaciones'},
+                { value: 'STD', text: 'Estándares'}
             ],
             categoriaSelected: null,
 
             perfilOptions: [
                 { value: null, text: 'Seleccione perfil' },
-                { value: 'DEV', text: 'DEV' },
-                { value: 'QA', text: 'QA' },
-                { value: 'FUNC', text: 'FUNC' },
-                { value: 'VARIOS', text: 'Varios' },
+                { value: 'DEV', text: 'Desarrollo' },
+                { value: 'QA', text: 'Homologación' },
+                { value: 'FUNC', text: 'Funcional' },
+                { value: 'VAR', text: 'Varios' },
             ],
             perfilSelected: null,
             mailAConfirmar: "",
@@ -136,7 +148,8 @@ export default {
     },  
     validators: {
       'curso.titulo': function (value) {
-        return Validator.value(value).required().regex('^[A-Za-z ]*$', 'Debe ingresar solo caracteres alfabéticos');
+        //return Validator.value(value).required().regex('^[A-Za-z ]*$', 'Debe ingresar solo caracteres alfabéticos');
+        return Validator.value(value).required().minLength(10);
       },
       'curso.tipo': function (value) {
         return Validator.value(value).required();
@@ -164,11 +177,13 @@ export default {
       }      
     },    
     methods: {
-      async guardarTemporal() {
+      async guardar() {
           try {
             let esValido = await this.$validate()
             if (esValido) {							
+                console.log(this.curso)
                 await this.$store.dispatch('createCurso', this.curso)
+                
                 this.$router.push('/')
             } else {
                 this.$bvToast.toast('Hay errores en el formulario y no es posible enviar la información', {
@@ -198,6 +213,9 @@ export default {
       goToHome() {
           this.$router.push("/")
       }
+    },
+    computed: {
+
     },
     components: {
         NavigationBar

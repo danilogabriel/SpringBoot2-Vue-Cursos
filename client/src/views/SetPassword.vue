@@ -47,8 +47,8 @@ export default {
     data(){
 	    return {
             //usuario: $route.params.usuario,
-            password1: '',
-            password2: ''
+            password1: '123456',
+            password2: '123456'
         }
     },  
     validators: {

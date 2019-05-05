@@ -1,9 +1,9 @@
 <template>
         <b-navbar type="dark" variant="primary">
-            <b-navbar-brand href="/home">Capacita2</b-navbar-brand>
+            <b-navbar-brand to="/home">Capacita2</b-navbar-brand>
 
             <b-navbar-nav>
-                <b-nav-item to="/nuevocurso">Nuevo</b-nav-item>
+                <b-nav-item to="/formcurso">Nuevo</b-nav-item>
                 <b-nav-item href="#">Mis Cursos</b-nav-item>
                 <b-nav-item right href="#">Reporte</b-nav-item>
             </b-navbar-nav>

@@ -67,7 +67,7 @@ export default {
             this.$refs['confirmacion-modal'].hide()
         },        
         goToHome() {
-            this.$router.push("/");
+            this.$router.push("/home");
         }
     },
     components: {

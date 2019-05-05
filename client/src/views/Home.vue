@@ -24,7 +24,7 @@
                     <b-card-text>{{curso.descripcion}}</b-card-text>
                     <div >
                         <b-button class="m-3" variant="primary" @click="verDetalles(curso)">Detalles</b-button>
-                        <b-button v-if="curso.usuario==$store.state.user.username" variant="primary" @click="verDetalles(curso)">Editar</b-button>                        
+                        <b-button v-if="curso.usuario==$store.state.user.username" variant="primary" @click="editarCurso(curso)">Editar</b-button>                        
                     </div>
                 </b-card>
             </b-col>
@@ -61,8 +61,11 @@ export default {
             this.$store.commit('setCursoSeleccionado', curso)
             this.$router.push("/detallecurso");
         },
+        editarCurso(curso){       
+            this.$router.push({name: 'formcurso', params: { curso: curso} })     
+        },
         goToNuevoCurso(){
-            this.$router.push("/nuevocurso");
+            this.$router.push("/formcurso");            
         }
 
     },

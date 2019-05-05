@@ -29,9 +29,15 @@ public class CursoController {
     private CursoService cursoService;
 
     @PostMapping
-    public ResponseEntity<String> addCurso(@RequestBody Curso newCurso) {
-        cursoService.createCurso(newCurso.getUsuario().getLegajo(), newCurso);
+    public ResponseEntity<String> createCurso(@RequestBody Curso newCurso) {
+        cursoService.saveCurso(newCurso.getUsuario().getLegajo(), newCurso);
         return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @PostMapping("/usuario/{legajo}")
+    public ResponseEntity<String> createCursoPorLegajo(@PathVariable("legajo") Integer legajo, @RequestBody Curso newCurso) {
+        cursoService.saveCurso(legajo, newCurso);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/usuario/{legajo}")
@@ -39,14 +45,14 @@ public class CursoController {
         return cursoService.getCursosPublicadoYPropios(legajo);
     }
 
-    @RequestMapping("/{id}")
+    @GetMapping("/{id}")
     public Optional<Curso> getCursoPorId(@PathVariable("id") Integer id) {
         return cursoService.getCursoPorId(id);
     }
 
-    @PostMapping("/usuario/{legajo}")
-    public Curso createCurso(@PathVariable(value = "legajo") Integer legajo, @Valid @RequestBody Curso curso) {
-        return cursoService.createCurso(legajo, curso);
-    }
+//    @PostMapping("/usuario/{legajo}")
+//    public Curso createCurso(@PathVariable(value = "legajo") Integer legajo, @Valid @RequestBody Curso curso) {
+//        return cursoService.saveCurso(legajo, curso);
+//    }
 
 }

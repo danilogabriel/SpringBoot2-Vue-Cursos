@@ -36,17 +36,20 @@ public class CursoService {
         return repoCurso.getPublicadoYPropios(legajo);
     }
 
-    public Curso createCurso (Integer legajo, Curso curso){
-        Usuario usu=null;
-        try{
-            usu = repoUsuario.findByLegajo(legajo);
-            if (usu == null) throw new UsuarioNotFoundException("Usuario legajo: " + legajo + " not found");
+    public Curso saveCurso (Integer legajo, Curso cursoParam){
 
-        }catch(UsuarioNotFoundException e){
-            LOGGER.error("Error: {}", e.getMessage());
+        if (cursoParam.getId()== null) {
+            Usuario usu = null;
+            try {
+                usu = repoUsuario.findByLegajo(legajo);
+                if (usu == null) throw new UsuarioNotFoundException("Usuario legajo: " + legajo + " not found");
+
+            } catch (UsuarioNotFoundException e) {
+                LOGGER.error("Error: {}", e.getMessage());
+            }
+            cursoParam.setUsuario(usu);
         }
-        curso.setUsuario(usu);
-        return repoCurso.save(curso);
+        return repoCurso.save(cursoParam);
     }
 
     private class UsuarioNotFoundException extends Throwable {

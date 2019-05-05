@@ -3,6 +3,7 @@ package capacita.controller;
 import capacita.model.Usuario;
 import capacita.repository.UsuarioRepository;
 
+import capacita.services.UsuarioService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,28 +24,21 @@ public class UsuarioController {
     @Autowired
     private UsuarioRepository repoUsuario;
 
-    //@Autowired
-    //private BCryptPasswordEncoder bCryptPasswordEncoder;
+    @Autowired
+    private UsuarioService usuarioService;
 
     @GetMapping
     public List<Usuario> getUsuarios(){
-        return repoUsuario.findAll();
-    }
-
-    @PostMapping
-    public ResponseEntity<String> addUsuario(@RequestBody Usuario usu){
-        //usu.setPassword(bCryptPasswordEncoder.encode(usu.getPassword()));
-        repoUsuario.save(usu);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return usuarioService.getUsuarios();
     }
 
     @GetMapping("/{legajo}")
     public Usuario getUsuariosPorLegajo(@PathVariable("legajo") Integer legajo){
-        return repoUsuario.findByLegajo(legajo);
+        return usuarioService.findUsuarioByLegajo(legajo);
     }
 
     @GetMapping("/{username}")
     public Usuario getUsuarioPorMail(@PathVariable String username) {
-        return repoUsuario.findByUsername(username);
+        return usuarioService.findUsuarioByMail(username);
     }
 }

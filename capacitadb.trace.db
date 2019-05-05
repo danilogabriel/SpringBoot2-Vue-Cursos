@@ -1,0 +1,12 @@
+2019-05-05 13:23:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "CURSOS" no encontrada
+Table "CURSOS" not found; SQL statement:
+SELECT * FROM Cursos cur WHERE cur.publicado = true and cur.usuario_legajo = ? [42102-197]
+2019-05-05 13:34:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "CURSOS" no encontrada
+Table "CURSOS" not found; SQL statement:
+SELECT * FROM Cursos cur WHERE cur.publicado = true and cur.usuario_legajo = ? [42102-197]
+2019-05-05 13:34:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Tabla "CURSOS" no encontrada
+Table "CURSOS" not found; SQL statement:
+SELECT * FROM Cursos cur WHERE cur.publicado = true and cur.usuario_legajo = ? [42102-197]

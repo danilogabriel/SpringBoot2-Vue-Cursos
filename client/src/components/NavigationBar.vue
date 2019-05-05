@@ -1,6 +1,6 @@
 <template>
         <b-navbar type="dark" variant="primary">
-            <b-navbar-brand href="#">Capacita2</b-navbar-brand>
+            <b-navbar-brand href="/home">Capacita2</b-navbar-brand>
 
             <b-navbar-nav>
                 <b-nav-item to="/nuevocurso">Nuevo</b-nav-item>

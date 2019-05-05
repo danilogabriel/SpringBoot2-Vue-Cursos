@@ -48,7 +48,7 @@ export default {
     mounted() {        
         this.$http({
             method: "GET",
-            "url": "api/cursos"
+            "url": "api/cursos/usuario/" + this.$store.state.user.legajo
         }).then(response => {
             this.cursosList = response.data;
         }, error => {

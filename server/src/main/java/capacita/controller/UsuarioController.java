@@ -41,4 +41,10 @@ public class UsuarioController {
     public Usuario getUsuarioPorMail(@PathVariable String username) {
         return usuarioService.findUsuarioByMail(username);
     }
+
+    @GetMapping("/{cuit}")
+    public Usuario getUsuarioPorCuit(@PathVariable Long cuit) {
+        return usuarioService.findUsuarioByCuit(cuit);
+    }
+
 }

@@ -4,7 +4,8 @@
 			<h3 class="text-center p-4">Ingreso a Propuestas de Capacitación</h3>       
 
 				<b-input-group append="@afip.gob.ar" class="mb-2 mr-2">
-				<b-form-input placeholder="usuario de e-mail" v-model="userLogin.username"></b-form-input>
+				<b-form-input placeholder="usuario de e-mail" v-model="userLogin.username">
+				</b-form-input>
 				</b-input-group>
 				<div class="text-danger">{{ validation.firstError('userLogin.username') }}</div>
 
@@ -14,11 +15,36 @@
 					v-model="userLogin.legajo" />
 				<div class="text-danger">{{ validation.firstError('userLogin.legajo') }}</div>
 
-				<b-form-input class="mb-2 mr-2"
+				<b-form-input class="mb-2 mr-2" @blur="verificarPrimerAcceso()"
 					placeholder="CUIT / CUIL"
 					required 
 					v-model="userLogin.cuit" />
 				<div class="text-danger">{{ validation.firstError('userLogin.cuit') }}</div>
+
+				<b-form-input class="mb-2 mr-2" v-if="!primerAcceso" 
+                    type="password"
+					placeholder="Contraseña"
+					required 
+					v-model="password" />
+                <div class="text-danger">{{ validation.firstError('password1') }}</div>
+
+				<div v-if="primerAcceso">
+					<h6>Bienvenido <strong>{{  }}</strong> al registro de propuestas de Capacitación.</h6>
+					<h6>Es tu primer ingreso y debes cargar una contraseña para poder operar.</h6>
+
+					<b-form-input class="mb-2 mr-2"
+						type="password"
+						placeholder="Contraseña"
+						required 
+						v-model="password1" />
+					<div class="text-danger">{{ validation.firstError('password1') }}</div>
+
+					<b-form-input class="mb-2 mr-2"
+						type="password"
+						placeholder="Reingrese contraseña"
+						required 
+						v-model="password2" />
+				</div>
 
 				<button type="submit" class="btn btn-primary btn-block" @click="login()" >Ingresar</button>		
 		</div>
@@ -30,11 +56,16 @@ import {Validator} from 'simple-vue-validator'
 
 export default {
 	data(){
-		return {			
+		return {	
+			primerAcceso: false,		
+			password: null,
+			password1: null,
+			password2: null,
 			userLogin: {
 				username : "dbiondi",
 				legajo : 3710681,
-				cuit: 20220254144
+				cuit: 20220254144,
+				password: null
 			}	
     	}
 	},
@@ -57,27 +88,56 @@ export default {
       }	  
     }, 	
 	methods: {
-		async login() {
+		async verificarPrimerAcceso(){
 			try {
-				let esValido = await this.$validate()
-				if (esValido) {							
-					var response = await this.$store.dispatch('login', this.userLogin)					
-					if (response.message == "PASSWORD_REQUIRED")
-						this.$router.push({name: 'acceso', params: { usuario: response.usuario} })
-						// En esta ruta, el param 'usuario' que se pasa como parametro es tomado
-						// por el componente SetPassword.vue como una props.
-						//  Esto sucede por que en router.js esa ruta tiene aclarado props:true.
-					else
-						this.$router.push('/')
+				var response = await this.$http({ method: "POST", data: { cuit: this.userLogin.cuit }, "url": "api/auth/firstaccess"})
+				if (response.data == true) {
+					this.primerAcceso = true
 				}
 			} catch (error) {
 				console.log(error)
 			}
-			// ---------------  A la manera de Promise ------------------------
-			// this.$store.dispatch('login', this.userLogin)
-			// 								.then(() => this.$router.push('/'))
-			// 								.catch(err => console.log(err))
-			// }
+		},
+		login() {
+			let esValido = this.$validate()
+			if (esValido) {			
+				if (this.primerAcceso) {
+					this.procesarPrimerAcceso()
+				} else {
+					this.procesarLogin()
+				}
+			} else {
+				//  Hubo errores en la captura del formulario
+			}		
+		},
+		async procesarPrimerAcceso() {
+			if (this.password1==this.password2) {
+				try {
+					var params = { 
+                        "legajo": this.userLogin.legajo, 
+                        "password": this.password1
+                    }	
+					var response = await this.$http({ method: "POST", data: params, "url": "api/auth/updatepass"})
+					this.$router.push('/')
+					
+				} catch (error) {
+					console.log("Error interno del servidor")
+				}
+			}
+
+		},
+		async procesarLogin() {
+			try {
+				var response = await this.$store.dispatch('login', this.userLogin)
+				if (response.message == "LOGIN_SUCCESS") {
+					this.$router.push('/')
+				} else {
+					//---------- hubo un error en el login del backend -----
+					console.log("Error: " + response.message)
+				}
+			} catch(error) {
+				console.log("Error interno del servidor")
+			}
 		}
 	}
 }

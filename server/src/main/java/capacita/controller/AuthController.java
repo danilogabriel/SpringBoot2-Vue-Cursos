@@ -72,7 +72,7 @@ public class AuthController {
                     response.setMessage("PASSWORD_REQUIRED");
                 } else {
 
-                    response.setMessage("Login exitoso");
+                    response.setMessage("LOGIN_SUCCESS");
                 }
                 token = getJWTToken(reqLogin.getUsername());
                 response.setToken(token);
@@ -84,6 +84,15 @@ public class AuthController {
         }
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
+    @PostMapping("/firstaccess")
+    public ResponseEntity<Boolean> verifyPass(@RequestBody Map<String, Long> params) {
+        Long cuit = params.get("cuit");
+        Usuario usu = usuarioService.findUsuarioByCuit(cuit);
+        if (usu.getPassword()==null) return new ResponseEntity<>(true, HttpStatus.OK);
+        return new ResponseEntity<>(false, HttpStatus.OK);
+    }
+
 
     @PostMapping("/updatepass")
     public ResponseEntity<String> updatePass(@RequestBody Map<String, String> params) {

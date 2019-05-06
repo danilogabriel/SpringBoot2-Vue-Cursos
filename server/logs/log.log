@@ -1,265 +1,566 @@
-03-05-2019 08:37:04.702 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 4480 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
-03-05-2019 08:37:04.730 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-03-05-2019 08:37:04.858 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc862fe: startup date [Fri May 03 08:37:04 ART 2019]; root of context hierarchy
-03-05-2019 08:37:07.530 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a8ab794a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-03-05-2019 08:37:08.126 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-03-05-2019 08:37:08.159 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-03-05-2019 08:37:08.160 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
-03-05-2019 08:37:08.171 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-03-05-2019 08:37:08.432 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-03-05-2019 08:37:08.433 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3575 ms
-03-05-2019 08:37:08.682 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
-03-05-2019 08:37:08.683 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-03-05-2019 08:37:08.684 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-03-05-2019 08:37:08.684 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
-03-05-2019 08:37:08.685 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
-03-05-2019 08:37:08.686 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
-03-05-2019 08:37:08.686 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
-03-05-2019 08:37:08.689 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
-03-05-2019 08:37:09.017 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-03-05-2019 08:37:09.410 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-03-05-2019 08:37:09.492 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
-03-05-2019 08:37:09.582 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+06-05-2019 08:54:44.646 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 4632 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+06-05-2019 08:54:44.654 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+06-05-2019 08:54:44.885 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e7ed538: startup date [Mon May 06 08:54:44 ART 2019]; root of context hierarchy
+06-05-2019 08:54:48.360 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9a91c988] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+06-05-2019 08:54:48.982 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+06-05-2019 08:54:49.035 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+06-05-2019 08:54:49.036 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+06-05-2019 08:54:49.050 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+06-05-2019 08:54:49.327 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+06-05-2019 08:54:49.327 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4442 ms
+06-05-2019 08:54:49.587 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+06-05-2019 08:54:49.588 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+06-05-2019 08:54:49.589 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+06-05-2019 08:54:49.589 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+06-05-2019 08:54:49.590 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+06-05-2019 08:54:49.590 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+06-05-2019 08:54:49.591 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+06-05-2019 08:54:49.593 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+06-05-2019 08:54:49.907 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+06-05-2019 08:54:50.230 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+06-05-2019 08:54:50.310 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+06-05-2019 08:54:50.360 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-03-05-2019 08:37:09.824 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
-03-05-2019 08:37:09.826 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
-03-05-2019 08:37:09.923 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-03-05-2019 08:37:10.194 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-03-05-2019 08:37:11.481 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@312a0faf'
-03-05-2019 08:37:11.484 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-03-05-2019 08:37:11.650 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
-03-05-2019 08:37:11.675 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 24 ms.
-03-05-2019 08:37:13.006 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+06-05-2019 08:54:50.557 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+06-05-2019 08:54:50.567 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+06-05-2019 08:54:50.705 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+06-05-2019 08:54:51.015 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-05-2019 08:54:51.998 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@291c8e7e'
+06-05-2019 08:54:52.001 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 08:54:52.145 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+06-05-2019 08:54:52.154 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 8 ms.
+06-05-2019 08:54:53.041 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
 
-Using generated security password: 4aeb9a91-11de-4d15-bce7-4f8c56f99a17
+Using generated security password: 984148c7-afa0-4947-a69c-6e33236fab3d
 
-03-05-2019 08:37:13.726 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
-03-05-2019 08:37:13.727 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
-03-05-2019 08:37:13.727 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
-03-05-2019 08:37:13.728 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
-03-05-2019 08:37:13.728 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
-03-05-2019 08:37:13.728 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
-03-05-2019 08:37:13.880 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-03-05-2019 08:37:13.905 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-03-05-2019 08:37:13.995 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
-03-05-2019 08:37:13.997 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.lang.Integer,java.lang.String)
-03-05-2019 08:37:14.000 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursos()
-03-05-2019 08:37:14.001 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.addCurso(capacita.model.Curso)
-03-05-2019 08:37:14.002 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
-03-05-2019 08:37:14.004 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public capacita.model.Curso capacita.controller.CursoController.createCurso(java.lang.Integer,capacita.model.Curso)
-03-05-2019 08:37:14.005 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
-03-05-2019 08:37:14.013 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
-03-05-2019 08:37:14.014 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
-03-05-2019 08:37:14.016 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.UsuarioController.addUsuario(capacita.model.Usuario)
-03-05-2019 08:37:14.017 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
-03-05-2019 08:37:14.092 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-03-05-2019 08:37:14.093 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-03-05-2019 08:37:14.105 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
-03-05-2019 08:37:14.166 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@489566af, org.springframework.security.web.context.SecurityContextPersistenceFilter@bcb19ae, org.springframework.security.web.header.HeaderWriterFilter@28f887fd, org.springframework.web.filter.CorsFilter@1b2fa8a6, org.springframework.security.web.authentication.logout.LogoutFilter@692e2da1, capacita.security.JWTAuthorizationFilter@3757c00b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32b4be00, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6d72b370, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18cbe3b4, org.springframework.security.web.session.SessionManagementFilter@1b094a66, org.springframework.security.web.access.ExceptionTranslationFilter@a01a61b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@551b0cbd]
-03-05-2019 08:37:14.610 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc862fe: startup date [Fri May 03 08:37:04 ART 2019]; root of context hierarchy
-03-05-2019 08:37:15.440 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-03-05-2019 08:37:15.487 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
-03-05-2019 08:37:15.490 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
-03-05-2019 08:37:15.499 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-03-05-2019 08:37:15.573 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-03-05-2019 08:37:15.580 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 11.838 seconds (JVM running for 14.298)
-03-05-2019 08:37:15.587 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
-03-05-2019 08:38:04.213 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
-03-05-2019 08:38:04.215 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
-03-05-2019 08:38:04.235 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
-03-05-2019 08:38:04.249 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 08:38:04.310 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 08:38:04.452 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
-03-05-2019 08:38:05.269 [http-nio-8080-exec-3] INFO  capacita.controller.CursoController.getCursos - Obtener solo cursos publicados
-03-05-2019 08:38:36.772 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 08:38:36.874 [http-nio-8080-exec-5] INFO  capacita.controller.CursoController.getCursos - Obtener solo cursos publicados
-03-05-2019 08:44:21.319 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 08:44:21.415 [http-nio-8080-exec-8] INFO  capacita.controller.CursoController.getCursos - Obtener solo cursos publicados
-03-05-2019 09:48:37.915 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 09:48:37.922 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 09:50:22.969 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 09:58:24.094 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:28:33.022 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:28:33.029 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:28:58.992 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:29:07.907 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:29:38.854 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:32:03.106 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:34:12.070 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:35:00.507 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:36:23.267 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:40:22.698 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:42:58.745 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 10:50:16.392 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:00:42.923 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:00:42.934 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:04:28.501 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:36:49.941 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:36:49.952 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:39:08.294 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:40:00.480 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:41:44.986 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 11:42:28.583 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 12:10:51.170 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 12:10:51.177 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 12:13:31.403 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 12:15:06.878 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:15:38.788 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:15:38.802 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:16:10.976 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:18:05.627 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:19:00.181 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:24:23.370 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:25:12.025 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:26:30.320 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 14:27:12.779 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:15:23.677 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:15:23.683 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:18:53.491 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:19:35.403 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:19:46.237 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:19:46.344 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved exception caused by Handler execution: org.springframework.web.bind.MissingServletRequestParameterException: Required Integer parameter 'legajo' is not present
-03-05-2019 15:43:26.383 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:43:33.503 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:43:33.523 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved exception caused by Handler execution: org.springframework.web.bind.MissingServletRequestParameterException: Required Integer parameter 'legajo' is not present
-03-05-2019 15:44:57.893 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:45:04.278 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved exception caused by Handler execution: org.springframework.web.bind.MissingServletRequestParameterException: Required Integer parameter 'legajo' is not present
-03-05-2019 15:46:17.637 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:46:17.643 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:46:25.473 [http-nio-8080-exec-8] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved exception caused by Handler execution: org.springframework.web.bind.MissingServletRequestParameterException: Required Integer parameter 'legajo' is not present
-03-05-2019 15:48:07.376 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:48:47.990 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:49:34.110 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 15:49:41.899 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved exception caused by Handler execution: org.springframework.web.bind.MissingServletRequestParameterException: Required Integer parameter 'legajo' is not present
-03-05-2019 15:52:31.453 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved exception caused by Handler execution: org.springframework.web.bind.MissingServletRequestParameterException: Required Integer parameter 'legajo' is not present
-03-05-2019 16:40:16.828 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3fc862fe: startup date [Fri May 03 08:37:04 ART 2019]; root of context hierarchy
-03-05-2019 16:40:16.890 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
-03-05-2019 16:40:16.892 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
-03-05-2019 16:40:16.895 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-03-05-2019 16:40:16.934 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-03-05-2019 16:40:17.088 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
-03-05-2019 16:40:41.324 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 15639 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
-03-05-2019 16:40:41.327 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-03-05-2019 16:40:41.636 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@44f3b64d: startup date [Fri May 03 16:40:41 ART 2019]; root of context hierarchy
-03-05-2019 16:40:48.751 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b3aac0dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-03-05-2019 16:40:49.562 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-03-05-2019 16:40:49.640 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-03-05-2019 16:40:49.640 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
-03-05-2019 16:40:49.652 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-03-05-2019 16:40:49.935 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-03-05-2019 16:40:49.936 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 8301 ms
-03-05-2019 16:40:50.197 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
-03-05-2019 16:40:50.198 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-03-05-2019 16:40:50.200 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-03-05-2019 16:40:50.200 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
-03-05-2019 16:40:50.201 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
-03-05-2019 16:40:50.202 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
-03-05-2019 16:40:50.202 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
-03-05-2019 16:40:50.204 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
-03-05-2019 16:40:50.630 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-03-05-2019 16:40:50.967 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-03-05-2019 16:40:51.066 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
-03-05-2019 16:40:51.131 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+06-05-2019 08:54:53.141 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
+06-05-2019 08:54:53.142 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
+06-05-2019 08:54:53.143 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
+06-05-2019 08:54:53.143 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
+06-05-2019 08:54:53.145 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
+06-05-2019 08:54:53.151 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
+06-05-2019 08:54:53.366 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 08:54:53.412 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-05-2019 08:54:53.544 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
+06-05-2019 08:54:53.546 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 08:54:53.552 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
+06-05-2019 08:54:53.554 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
+06-05-2019 08:54:53.555 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
+06-05-2019 08:54:53.556 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
+06-05-2019 08:54:53.558 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
+06-05-2019 08:54:53.561 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
+06-05-2019 08:54:53.562 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
+06-05-2019 08:54:53.564 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
+06-05-2019 08:54:53.629 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 08:54:53.630 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 08:54:53.647 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
+06-05-2019 08:54:53.700 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53f18013, org.springframework.security.web.context.SecurityContextPersistenceFilter@48a5b21e, org.springframework.security.web.header.HeaderWriterFilter@6ce3ec73, org.springframework.web.filter.CorsFilter@79c5c250, org.springframework.security.web.authentication.logout.LogoutFilter@882fede, capacita.security.JWTAuthorizationFilter@2cb69deb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61a7bdc2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@132f9eba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@55ec8728, org.springframework.security.web.session.SessionManagementFilter@42b6ed0d, org.springframework.security.web.access.ExceptionTranslationFilter@5cff77f7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35097a3]
+06-05-2019 08:54:54.001 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e7ed538: startup date [Mon May 06 08:54:44 ART 2019]; root of context hierarchy
+06-05-2019 08:54:54.575 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+06-05-2019 08:54:54.632 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+06-05-2019 08:54:54.635 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+06-05-2019 08:54:54.644 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+06-05-2019 08:54:54.717 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+06-05-2019 08:54:54.722 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 11.644 seconds (JVM running for 13.342)
+06-05-2019 08:54:54.725 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
+06-05-2019 09:11:27.101 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+06-05-2019 09:11:27.102 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+06-05-2019 09:11:27.137 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+06-05-2019 09:11:27.177 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 09:11:27.244 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 09:11:27.406 [http-nio-8080-exec-3] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+06-05-2019 09:53:09.040 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7e7ed538: startup date [Mon May 06 08:54:44 ART 2019]; root of context hierarchy
+06-05-2019 09:53:09.044 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+06-05-2019 09:53:09.047 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+06-05-2019 09:53:09.050 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 09:53:09.052 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+06-05-2019 09:53:09.073 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+06-05-2019 09:55:28.624 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 6020 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+06-05-2019 09:55:28.629 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+06-05-2019 09:55:28.754 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f9b4004: startup date [Mon May 06 09:55:28 ART 2019]; root of context hierarchy
+06-05-2019 09:55:31.011 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9c70297a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+06-05-2019 09:55:31.647 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+06-05-2019 09:55:31.682 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+06-05-2019 09:55:31.682 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+06-05-2019 09:55:31.693 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+06-05-2019 09:55:31.932 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+06-05-2019 09:55:31.933 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3179 ms
+06-05-2019 09:55:32.232 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+06-05-2019 09:55:32.233 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+06-05-2019 09:55:32.233 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+06-05-2019 09:55:32.234 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+06-05-2019 09:55:32.235 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+06-05-2019 09:55:32.235 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+06-05-2019 09:55:32.236 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+06-05-2019 09:55:32.248 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+06-05-2019 09:55:32.679 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+06-05-2019 09:55:33.041 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+06-05-2019 09:55:33.150 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+06-05-2019 09:55:33.189 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-03-05-2019 16:40:51.302 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
-03-05-2019 16:40:51.306 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
-03-05-2019 16:40:51.396 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-03-05-2019 16:40:51.630 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-03-05-2019 16:40:52.491 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5cefed12'
-03-05-2019 16:40:52.495 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-03-05-2019 16:40:52.660 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
-03-05-2019 16:40:52.685 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 24 ms.
-03-05-2019 16:40:53.558 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+06-05-2019 09:55:33.337 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+06-05-2019 09:55:33.340 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+06-05-2019 09:55:33.440 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+06-05-2019 09:55:33.699 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-05-2019 09:55:34.707 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3ee731dd'
+06-05-2019 09:55:34.711 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 09:55:34.905 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+06-05-2019 09:55:34.939 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 33 ms.
+06-05-2019 09:55:36.072 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
 
-Using generated security password: dc6d1a4d-8853-40fc-ae57-60b30db29a35
+Using generated security password: 24d031b3-d451-400a-be4a-24dc396e125b
 
-03-05-2019 16:40:53.639 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
-03-05-2019 16:40:53.639 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
-03-05-2019 16:40:53.640 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
-03-05-2019 16:40:53.640 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
-03-05-2019 16:40:53.640 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
-03-05-2019 16:40:53.641 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
-03-05-2019 16:40:53.752 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-03-05-2019 16:40:53.785 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-03-05-2019 16:40:53.884 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
-03-05-2019 16:40:53.886 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
-03-05-2019 16:40:53.889 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
-03-05-2019 16:40:53.890 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursos()
-03-05-2019 16:40:53.892 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public capacita.model.Curso capacita.controller.CursoController.createCurso(java.lang.Integer,capacita.model.Curso)
-03-05-2019 16:40:53.893 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.addCurso(capacita.model.Curso)
-03-05-2019 16:40:53.894 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
-03-05-2019 16:40:53.899 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.UsuarioController.addUsuario(capacita.model.Usuario)
-03-05-2019 16:40:53.900 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
-03-05-2019 16:40:53.901 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
-03-05-2019 16:40:53.902 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
-03-05-2019 16:40:53.945 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-03-05-2019 16:40:53.946 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-03-05-2019 16:40:53.956 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
-03-05-2019 16:40:53.998 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77b084c, org.springframework.security.web.context.SecurityContextPersistenceFilter@648f8e8e, org.springframework.security.web.header.HeaderWriterFilter@61c6afb4, org.springframework.web.filter.CorsFilter@13c7e92, org.springframework.security.web.authentication.logout.LogoutFilter@6be68cff, capacita.security.JWTAuthorizationFilter@256b3caa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@153a4662, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5aa324f3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46307e3, org.springframework.security.web.session.SessionManagementFilter@79245d79, org.springframework.security.web.access.ExceptionTranslationFilter@637825f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@daa16ee]
-03-05-2019 16:40:54.301 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@44f3b64d: startup date [Fri May 03 16:40:41 ART 2019]; root of context hierarchy
-03-05-2019 16:40:55.006 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-03-05-2019 16:40:55.064 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
-03-05-2019 16:40:55.068 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
-03-05-2019 16:40:55.076 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-03-05-2019 16:40:55.144 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-03-05-2019 16:40:55.150 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 17.507 seconds (JVM running for 23.995)
-03-05-2019 16:40:55.153 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
-03-05-2019 16:41:16.590 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
-03-05-2019 16:41:16.591 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
-03-05-2019 16:41:16.624 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
-03-05-2019 16:41:16.663 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:41:16.773 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:41:16.922 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
-03-05-2019 16:41:25.089 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:03.931 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:03.982 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:04.159 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:04.239 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:04.341 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:04.397 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:04.480 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:05.973 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.108 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.116 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.117 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.118 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.299 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.302 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.305 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.305 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.324 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.325 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.329 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.331 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.335 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.345 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:06.993 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.045 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.046 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.046 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.050 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.050 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.045 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.061 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.062 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.072 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.072 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.115 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.121 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.121 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.128 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:07.128 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:10.481 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:42:10.534 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:45:52.732 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:48:50.943 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:49:04.985 [http-nio-8080-exec-4] INFO  capacita.controller.CursoController.getCursos - Obtener solo cursos publicados
-03-05-2019 16:49:17.885 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
-03-05-2019 16:49:53.904 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@44f3b64d: startup date [Fri May 03 16:40:41 ART 2019]; root of context hierarchy
-03-05-2019 16:49:53.911 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
-03-05-2019 16:49:53.912 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
-03-05-2019 16:49:53.919 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
-03-05-2019 16:49:53.921 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
-03-05-2019 16:49:53.936 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+06-05-2019 09:55:36.185 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
+06-05-2019 09:55:36.186 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
+06-05-2019 09:55:36.186 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
+06-05-2019 09:55:36.187 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
+06-05-2019 09:55:36.187 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
+06-05-2019 09:55:36.187 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
+06-05-2019 09:55:36.318 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 09:55:36.344 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-05-2019 09:55:36.437 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/firstaccess],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> capacita.controller.AuthController.verifyPass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 09:55:36.440 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 09:55:36.441 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
+06-05-2019 09:55:36.446 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
+06-05-2019 09:55:36.448 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
+06-05-2019 09:55:36.448 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
+06-05-2019 09:55:36.449 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
+06-05-2019 09:55:36.451 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
+06-05-2019 09:55:36.453 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
+06-05-2019 09:55:36.454 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
+06-05-2019 09:55:36.455 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
+06-05-2019 09:55:36.495 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 09:55:36.496 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 09:55:36.507 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
+06-05-2019 09:55:36.548 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ab485e4, org.springframework.security.web.context.SecurityContextPersistenceFilter@21bbcd19, org.springframework.security.web.header.HeaderWriterFilter@40416d70, org.springframework.web.filter.CorsFilter@eca2820, org.springframework.security.web.authentication.logout.LogoutFilter@4a98a617, capacita.security.JWTAuthorizationFilter@42b73e6c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b526fcc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e4d84f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f1197a, org.springframework.security.web.session.SessionManagementFilter@386b2a62, org.springframework.security.web.access.ExceptionTranslationFilter@2d313e5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8e734f4]
+06-05-2019 09:55:36.846 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f9b4004: startup date [Mon May 06 09:55:28 ART 2019]; root of context hierarchy
+06-05-2019 09:55:37.440 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+06-05-2019 09:55:37.478 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+06-05-2019 09:55:37.481 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+06-05-2019 09:55:37.488 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+06-05-2019 09:55:37.538 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+06-05-2019 09:55:37.545 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 9.818 seconds (JVM running for 10.702)
+06-05-2019 09:55:37.549 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
+06-05-2019 09:55:54.697 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+06-05-2019 09:55:54.699 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+06-05-2019 09:55:54.730 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 30 ms
+06-05-2019 09:55:54.747 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 09:55:54.796 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved exception caused by Handler execution: org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+06-05-2019 10:06:45.211 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:06:45.215 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved exception caused by Handler execution: org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/x-www-form-urlencoded;charset=UTF-8' not supported
+06-05-2019 10:07:40.178 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:07:40.188 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:07:40.270 [http-nio-8080-exec-5] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+06-05-2019 10:08:03.549 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:08:12.784 [http-nio-8080-exec-7] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:10:56.420 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6f9b4004: startup date [Mon May 06 09:55:28 ART 2019]; root of context hierarchy
+06-05-2019 10:10:56.425 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+06-05-2019 10:10:56.427 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+06-05-2019 10:10:56.434 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:10:56.437 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+06-05-2019 10:10:56.451 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+06-05-2019 10:11:03.877 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 6354 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+06-05-2019 10:11:03.881 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+06-05-2019 10:11:04.016 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@57274e30: startup date [Mon May 06 10:11:04 ART 2019]; root of context hierarchy
+06-05-2019 10:11:06.000 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$22aa0663] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+06-05-2019 10:11:06.556 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+06-05-2019 10:11:06.591 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+06-05-2019 10:11:06.592 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+06-05-2019 10:11:06.603 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+06-05-2019 10:11:06.829 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+06-05-2019 10:11:06.829 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2813 ms
+06-05-2019 10:11:07.064 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+06-05-2019 10:11:07.066 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+06-05-2019 10:11:07.066 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+06-05-2019 10:11:07.067 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+06-05-2019 10:11:07.067 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+06-05-2019 10:11:07.068 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+06-05-2019 10:11:07.069 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+06-05-2019 10:11:07.071 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+06-05-2019 10:11:07.302 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+06-05-2019 10:11:07.576 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+06-05-2019 10:11:07.638 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:11:07.663 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+06-05-2019 10:11:07.776 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+06-05-2019 10:11:07.778 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+06-05-2019 10:11:07.833 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+06-05-2019 10:11:08.013 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-05-2019 10:11:08.807 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@56349be8'
+06-05-2019 10:11:08.810 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:11:08.916 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+06-05-2019 10:11:08.925 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 8 ms.
+06-05-2019 10:11:09.750 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: b65ec70f-f1c6-414a-96a0-bed123e72110
+
+06-05-2019 10:11:09.842 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
+06-05-2019 10:11:09.843 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
+06-05-2019 10:11:09.844 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
+06-05-2019 10:11:09.844 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
+06-05-2019 10:11:09.845 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
+06-05-2019 10:11:09.846 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
+06-05-2019 10:11:09.988 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:11:10.010 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-05-2019 10:11:10.096 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
+06-05-2019 10:11:10.098 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/firstaccess],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> capacita.controller.AuthController.verifyPass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 10:11:10.099 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 10:11:10.104 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
+06-05-2019 10:11:10.105 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
+06-05-2019 10:11:10.106 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
+06-05-2019 10:11:10.107 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
+06-05-2019 10:11:10.109 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
+06-05-2019 10:11:10.111 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
+06-05-2019 10:11:10.112 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
+06-05-2019 10:11:10.113 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
+06-05-2019 10:11:10.156 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:11:10.156 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:11:10.168 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
+06-05-2019 10:11:10.200 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b78184f, org.springframework.security.web.context.SecurityContextPersistenceFilter@521b4530, org.springframework.security.web.header.HeaderWriterFilter@1697f62b, org.springframework.web.filter.CorsFilter@49bd2379, org.springframework.security.web.authentication.logout.LogoutFilter@7a9c047a, capacita.security.JWTAuthorizationFilter@7b36c02d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60d84bfd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18e4062f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d0beb6d, org.springframework.security.web.session.SessionManagementFilter@66093ba5, org.springframework.security.web.access.ExceptionTranslationFilter@52bf6260, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13aaa7ce]
+06-05-2019 10:11:10.492 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@57274e30: startup date [Mon May 06 10:11:04 ART 2019]; root of context hierarchy
+06-05-2019 10:11:11.183 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+06-05-2019 10:11:11.244 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+06-05-2019 10:11:11.247 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+06-05-2019 10:11:11.255 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+06-05-2019 10:11:11.310 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+06-05-2019 10:11:11.320 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 8.246 seconds (JVM running for 9.151)
+06-05-2019 10:11:11.324 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
+06-05-2019 10:11:17.347 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+06-05-2019 10:11:17.349 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+06-05-2019 10:11:17.373 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 24 ms
+06-05-2019 10:11:17.389 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:11:17.527 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+06-05-2019 10:12:37.330 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@57274e30: startup date [Mon May 06 10:11:04 ART 2019]; root of context hierarchy
+06-05-2019 10:12:37.335 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+06-05-2019 10:12:37.346 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+06-05-2019 10:12:37.350 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:12:37.354 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+06-05-2019 10:12:37.369 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+06-05-2019 10:12:47.032 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 6485 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+06-05-2019 10:12:47.040 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+06-05-2019 10:12:47.279 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@770fcac3: startup date [Mon May 06 10:12:47 ART 2019]; root of context hierarchy
+06-05-2019 10:12:50.336 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$16382510] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+06-05-2019 10:12:50.904 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+06-05-2019 10:12:50.940 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+06-05-2019 10:12:50.941 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+06-05-2019 10:12:50.957 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+06-05-2019 10:12:51.201 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+06-05-2019 10:12:51.202 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3923 ms
+06-05-2019 10:12:51.429 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+06-05-2019 10:12:51.430 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+06-05-2019 10:12:51.431 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+06-05-2019 10:12:51.431 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+06-05-2019 10:12:51.432 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+06-05-2019 10:12:51.433 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+06-05-2019 10:12:51.433 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+06-05-2019 10:12:51.435 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+06-05-2019 10:12:51.692 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+06-05-2019 10:12:52.002 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+06-05-2019 10:12:52.066 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:12:52.092 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+06-05-2019 10:12:52.183 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+06-05-2019 10:12:52.185 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+06-05-2019 10:12:52.232 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+06-05-2019 10:12:52.432 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-05-2019 10:12:53.306 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@7a7e6e85'
+06-05-2019 10:12:53.309 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:12:53.427 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+06-05-2019 10:12:53.436 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 8 ms.
+06-05-2019 10:12:54.224 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: d970d8c8-8de8-4dd2-bd78-6f37a6fa042d
+
+06-05-2019 10:12:54.290 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
+06-05-2019 10:12:54.290 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
+06-05-2019 10:12:54.291 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
+06-05-2019 10:12:54.291 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
+06-05-2019 10:12:54.291 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
+06-05-2019 10:12:54.292 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
+06-05-2019 10:12:54.453 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:12:54.498 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-05-2019 10:12:54.636 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
+06-05-2019 10:12:54.638 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/firstaccess],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> capacita.controller.AuthController.verifyPass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 10:12:54.646 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 10:12:54.659 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
+06-05-2019 10:12:54.660 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
+06-05-2019 10:12:54.661 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
+06-05-2019 10:12:54.663 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
+06-05-2019 10:12:54.665 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
+06-05-2019 10:12:54.668 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
+06-05-2019 10:12:54.669 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
+06-05-2019 10:12:54.671 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
+06-05-2019 10:12:54.741 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:12:54.742 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:12:54.759 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
+06-05-2019 10:12:54.803 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c3a00c1, org.springframework.security.web.context.SecurityContextPersistenceFilter@1017882b, org.springframework.security.web.header.HeaderWriterFilter@1de0e7f8, org.springframework.web.filter.CorsFilter@4b04fbca, org.springframework.security.web.authentication.logout.LogoutFilter@634a125d, capacita.security.JWTAuthorizationFilter@4fe91283, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2901e933, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37ca6d8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f195912, org.springframework.security.web.session.SessionManagementFilter@45a44ad1, org.springframework.security.web.access.ExceptionTranslationFilter@5b7aec3b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10918a17]
+06-05-2019 10:12:55.139 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@770fcac3: startup date [Mon May 06 10:12:47 ART 2019]; root of context hierarchy
+06-05-2019 10:12:55.723 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+06-05-2019 10:12:55.779 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+06-05-2019 10:12:55.782 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+06-05-2019 10:12:55.790 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+06-05-2019 10:12:55.842 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+06-05-2019 10:12:55.849 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 9.661 seconds (JVM running for 10.538)
+06-05-2019 10:12:55.852 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
+06-05-2019 10:17:03.012 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+06-05-2019 10:17:03.013 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+06-05-2019 10:17:03.036 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+06-05-2019 10:17:03.054 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:17:03.208 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+06-05-2019 10:17:03.399 [http-nio-8080-exec-1] INFO  capacita.controller.AuthController.verifyPass - Password: null
+06-05-2019 10:18:00.569 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@770fcac3: startup date [Mon May 06 10:12:47 ART 2019]; root of context hierarchy
+06-05-2019 10:18:00.576 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+06-05-2019 10:18:00.577 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+06-05-2019 10:18:00.580 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:18:00.584 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+06-05-2019 10:18:00.598 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+06-05-2019 10:18:09.008 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 6628 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+06-05-2019 10:18:09.012 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+06-05-2019 10:18:09.149 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e5b1923: startup date [Mon May 06 10:18:09 ART 2019]; root of context hierarchy
+06-05-2019 10:18:11.342 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$eacbdfc9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+06-05-2019 10:18:11.851 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+06-05-2019 10:18:11.885 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+06-05-2019 10:18:11.886 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+06-05-2019 10:18:11.897 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+06-05-2019 10:18:12.136 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+06-05-2019 10:18:12.137 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2988 ms
+06-05-2019 10:18:12.365 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+06-05-2019 10:18:12.366 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+06-05-2019 10:18:12.367 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+06-05-2019 10:18:12.367 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+06-05-2019 10:18:12.368 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+06-05-2019 10:18:12.369 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+06-05-2019 10:18:12.369 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+06-05-2019 10:18:12.373 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+06-05-2019 10:18:12.596 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+06-05-2019 10:18:12.882 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+06-05-2019 10:18:12.941 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:18:12.962 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+06-05-2019 10:18:13.064 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+06-05-2019 10:18:13.066 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+06-05-2019 10:18:13.128 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+06-05-2019 10:18:13.309 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-05-2019 10:18:14.097 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@f422876'
+06-05-2019 10:18:14.100 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:18:14.208 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+06-05-2019 10:18:14.218 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 9 ms.
+06-05-2019 10:18:15.004 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 0ecbd5fc-be48-40f6-8c48-1ce0444b947e
+
+06-05-2019 10:18:15.094 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
+06-05-2019 10:18:15.094 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
+06-05-2019 10:18:15.094 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
+06-05-2019 10:18:15.095 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
+06-05-2019 10:18:15.095 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
+06-05-2019 10:18:15.096 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
+06-05-2019 10:18:15.252 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:18:15.275 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-05-2019 10:18:15.354 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
+06-05-2019 10:18:15.357 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/firstaccess],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> capacita.controller.AuthController.verifyPass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 10:18:15.358 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 10:18:15.363 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
+06-05-2019 10:18:15.364 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
+06-05-2019 10:18:15.365 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
+06-05-2019 10:18:15.366 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
+06-05-2019 10:18:15.367 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
+06-05-2019 10:18:15.370 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
+06-05-2019 10:18:15.371 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
+06-05-2019 10:18:15.372 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
+06-05-2019 10:18:15.418 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:18:15.418 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:18:15.432 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
+06-05-2019 10:18:15.467 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18f427e5, org.springframework.security.web.context.SecurityContextPersistenceFilter@5504a7fe, org.springframework.security.web.header.HeaderWriterFilter@1ffde876, org.springframework.web.filter.CorsFilter@47a097f3, org.springframework.security.web.authentication.logout.LogoutFilter@69ae916d, capacita.security.JWTAuthorizationFilter@3c1f8535, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bafccfd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52bf6260, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32ab6105, org.springframework.security.web.session.SessionManagementFilter@40e2db76, org.springframework.security.web.access.ExceptionTranslationFilter@7c1e0dba, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74ccca62]
+06-05-2019 10:18:15.762 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e5b1923: startup date [Mon May 06 10:18:09 ART 2019]; root of context hierarchy
+06-05-2019 10:18:16.329 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+06-05-2019 10:18:16.394 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+06-05-2019 10:18:16.397 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+06-05-2019 10:18:16.405 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+06-05-2019 10:18:16.461 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+06-05-2019 10:18:16.466 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 8.187 seconds (JVM running for 9.021)
+06-05-2019 10:18:16.469 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
+06-05-2019 10:18:37.513 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+06-05-2019 10:18:37.513 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+06-05-2019 10:18:37.535 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 21 ms
+06-05-2019 10:18:37.555 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:18:37.704 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+06-05-2019 10:20:11.422 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:21:33.064 [http-nio-8080-exec-5] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:33:26.547 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2e5b1923: startup date [Mon May 06 10:18:09 ART 2019]; root of context hierarchy
+06-05-2019 10:33:26.551 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+06-05-2019 10:33:26.552 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+06-05-2019 10:33:26.556 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:33:26.558 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+06-05-2019 10:33:26.571 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+06-05-2019 10:39:06.624 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 7925 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+06-05-2019 10:39:06.631 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+06-05-2019 10:39:06.811 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2234beb4: startup date [Mon May 06 10:39:06 ART 2019]; root of context hierarchy
+06-05-2019 10:39:08.808 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d4fb0750] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+06-05-2019 10:39:09.343 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+06-05-2019 10:39:09.380 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+06-05-2019 10:39:09.380 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+06-05-2019 10:39:09.391 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+06-05-2019 10:39:09.613 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+06-05-2019 10:39:09.614 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2802 ms
+06-05-2019 10:39:09.848 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+06-05-2019 10:39:09.849 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+06-05-2019 10:39:09.849 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+06-05-2019 10:39:09.850 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+06-05-2019 10:39:09.851 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+06-05-2019 10:39:09.851 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+06-05-2019 10:39:09.852 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+06-05-2019 10:39:09.855 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+06-05-2019 10:39:10.086 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+06-05-2019 10:39:10.382 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+06-05-2019 10:39:10.440 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:39:10.462 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+06-05-2019 10:39:10.556 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+06-05-2019 10:39:10.558 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+06-05-2019 10:39:10.609 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+06-05-2019 10:39:10.762 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-05-2019 10:39:11.613 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@5c26d0fb'
+06-05-2019 10:39:11.616 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 10:39:11.721 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+06-05-2019 10:39:11.730 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 8 ms.
+06-05-2019 10:39:12.487 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 4abb945f-6894-4f73-a371-e1cac55f1a6a
+
+06-05-2019 10:39:12.571 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
+06-05-2019 10:39:12.572 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
+06-05-2019 10:39:12.572 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
+06-05-2019 10:39:12.573 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
+06-05-2019 10:39:12.573 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
+06-05-2019 10:39:12.574 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
+06-05-2019 10:39:12.702 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:39:12.723 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-05-2019 10:39:12.813 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
+06-05-2019 10:39:12.815 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/firstaccess],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> capacita.controller.AuthController.verifyPass(java.util.Map<java.lang.String, java.lang.Long>)
+06-05-2019 10:39:12.816 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 10:39:12.821 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
+06-05-2019 10:39:12.822 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
+06-05-2019 10:39:12.823 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
+06-05-2019 10:39:12.824 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
+06-05-2019 10:39:12.825 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
+06-05-2019 10:39:12.829 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
+06-05-2019 10:39:12.830 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
+06-05-2019 10:39:12.831 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{cuit}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorCuit(java.lang.Long)
+06-05-2019 10:39:12.832 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
+06-05-2019 10:39:12.869 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:39:12.870 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 10:39:12.880 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
+06-05-2019 10:39:12.914 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74e77d0d, org.springframework.security.web.context.SecurityContextPersistenceFilter@132f9eba, org.springframework.security.web.header.HeaderWriterFilter@228fcf4e, org.springframework.web.filter.CorsFilter@6d98118b, org.springframework.security.web.authentication.logout.LogoutFilter@138b6e63, capacita.security.JWTAuthorizationFilter@2716982c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@51db5e36, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9ea2af, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79f1427b, org.springframework.security.web.session.SessionManagementFilter@7be0d686, org.springframework.security.web.access.ExceptionTranslationFilter@7755eba1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62691efb]
+06-05-2019 10:39:13.234 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2234beb4: startup date [Mon May 06 10:39:06 ART 2019]; root of context hierarchy
+06-05-2019 10:39:13.886 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+06-05-2019 10:39:13.946 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+06-05-2019 10:39:13.951 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+06-05-2019 10:39:13.959 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+06-05-2019 10:39:14.016 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+06-05-2019 10:39:14.022 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 8.254 seconds (JVM running for 9.085)
+06-05-2019 10:39:14.025 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
+06-05-2019 10:40:14.523 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+06-05-2019 10:40:14.524 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+06-05-2019 10:40:14.587 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+06-05-2019 10:40:14.605 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:40:14.654 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:40:14.786 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+06-05-2019 10:40:34.214 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:40:34.229 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:40:40.827 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 10:40:45.872 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:37:39.168 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2234beb4: startup date [Mon May 06 10:39:06 ART 2019]; root of context hierarchy
+06-05-2019 12:37:39.174 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+06-05-2019 12:37:39.177 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+06-05-2019 12:37:39.185 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 12:37:39.188 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+06-05-2019 12:37:39.251 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+06-05-2019 12:37:48.900 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 10078 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+06-05-2019 12:37:48.904 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+06-05-2019 12:37:49.034 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1b4349c4: startup date [Mon May 06 12:37:49 ART 2019]; root of context hierarchy
+06-05-2019 12:37:51.269 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$62efeb61] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+06-05-2019 12:37:51.808 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+06-05-2019 12:37:51.854 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+06-05-2019 12:37:51.855 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+06-05-2019 12:37:51.871 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+06-05-2019 12:37:52.233 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+06-05-2019 12:37:52.234 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 3200 ms
+06-05-2019 12:37:52.654 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+06-05-2019 12:37:52.656 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+06-05-2019 12:37:52.658 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+06-05-2019 12:37:52.669 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+06-05-2019 12:37:52.670 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+06-05-2019 12:37:52.671 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+06-05-2019 12:37:52.672 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+06-05-2019 12:37:52.674 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+06-05-2019 12:37:53.049 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+06-05-2019 12:37:53.433 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+06-05-2019 12:37:53.534 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+06-05-2019 12:37:53.582 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+06-05-2019 12:37:53.798 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+06-05-2019 12:37:53.809 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+06-05-2019 12:37:53.968 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+06-05-2019 12:37:54.205 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+06-05-2019 12:37:55.095 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@2f4a266f'
+06-05-2019 12:37:55.098 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06-05-2019 12:37:55.196 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+06-05-2019 12:37:55.205 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 8 ms.
+06-05-2019 12:37:55.968 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 77c04ace-9ca9-4c54-a7cc-5769fd0d56be
+
+06-05-2019 12:37:56.034 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
+06-05-2019 12:37:56.034 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
+06-05-2019 12:37:56.035 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
+06-05-2019 12:37:56.035 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
+06-05-2019 12:37:56.035 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
+06-05-2019 12:37:56.036 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
+06-05-2019 12:37:56.150 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 12:37:56.168 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06-05-2019 12:37:56.248 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
+06-05-2019 12:37:56.249 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/firstaccess],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> capacita.controller.AuthController.verifyPass(java.util.Map<java.lang.String, java.lang.Long>)
+06-05-2019 12:37:56.250 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
+06-05-2019 12:37:56.256 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
+06-05-2019 12:37:56.257 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
+06-05-2019 12:37:56.258 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
+06-05-2019 12:37:56.259 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
+06-05-2019 12:37:56.261 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
+06-05-2019 12:37:56.264 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
+06-05-2019 12:37:56.265 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
+06-05-2019 12:37:56.266 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
+06-05-2019 12:37:56.267 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{cuit}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorCuit(java.lang.Long)
+06-05-2019 12:37:56.311 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 12:37:56.311 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+06-05-2019 12:37:56.321 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
+06-05-2019 12:37:56.354 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2bba6ba7, org.springframework.security.web.context.SecurityContextPersistenceFilter@18e4062f, org.springframework.security.web.header.HeaderWriterFilter@69ae916d, org.springframework.web.filter.CorsFilter@379701ea, org.springframework.security.web.authentication.logout.LogoutFilter@737b47a3, capacita.security.JWTAuthorizationFilter@2fc87852, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34386cda, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2f807c48, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@766b6dd0, org.springframework.security.web.session.SessionManagementFilter@3e398632, org.springframework.security.web.access.ExceptionTranslationFilter@6df6f018, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29b3f719]
+06-05-2019 12:37:56.664 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1b4349c4: startup date [Mon May 06 12:37:49 ART 2019]; root of context hierarchy
+06-05-2019 12:37:57.095 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+06-05-2019 12:37:57.156 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+06-05-2019 12:37:57.159 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+06-05-2019 12:37:57.168 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+06-05-2019 12:37:57.599 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+06-05-2019 12:37:57.605 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 9.369 seconds (JVM running for 10.299)
+06-05-2019 12:37:57.608 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
+06-05-2019 12:38:03.625 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
+06-05-2019 12:38:03.626 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
+06-05-2019 12:38:03.645 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+06-05-2019 12:38:03.659 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:38:03.707 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:38:03.847 [http-nio-8080-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
+06-05-2019 12:39:17.624 [http-nio-8080-exec-4] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:40:45.618 [http-nio-8080-exec-6] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:42:05.913 [http-nio-8080-exec-8] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:42:14.468 [http-nio-8080-exec-9] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:42:14.477 [http-nio-8080-exec-10] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:42:51.129 [http-nio-8080-exec-1] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:42:58.830 [http-nio-8080-exec-2] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token
+06-05-2019 12:42:58.840 [http-nio-8080-exec-3] INFO  c.security.JWTAuthorizationFilter.existeJWTToken - *********** Request sin token

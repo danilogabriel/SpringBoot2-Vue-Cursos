@@ -12,6 +12,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario, String> {
 
     public Usuario findByLegajo(Integer legajo);
 
+    public Usuario findByCuit(Long cuit);
+
 }
 
 

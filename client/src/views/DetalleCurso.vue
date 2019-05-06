@@ -36,17 +36,35 @@ import NavigationBar from '@/components/NavigationBar.vue'
 export default {
     name: 'DetalleCurso',
     mounted() {
-        this.cursoSeleccionado = this.$store.getters.cursoSeleccionado
-        this.displayCurso.push(this.cursoSeleccionado)
+/*         this.cursoSeleccionado = {
+            "titulo": this.$store.getters.cursoSeleccionado
+        }
+ */        this.displayCurso.push(this.$store.getters.cursoSeleccionadoReducido)
     },
     data() {
         return {
-            mailAConfirmar: "",
-            cursoSeleccionado: { },
+            displayCurso: [ ],
 
-            displayCurso: [
-            ]
+            mailAConfirmar: "",
+
+ /*            displayCurso: [
+                { 
+                    "titulo": cursoSeleccionado.titulo,
+                    "tipo": cursoSeleccionado.tipo,
+                    "categoria": cursoSeleccionado.categoria,
+                    "descripcion": cursoSeleccionado.descripcion,
+                    "contenidos": cursoSeleccionado.contenidos,
+                    "instructores": cursoSeleccionado.instructores,
+                    "perfilAlumno": cursoSeleccionado.perfilAlumno,
+                    "cantHoras": cursoSeleccionado.cantHoras,
+                    "maxAlumnos": cursoSeleccionado.maxAlumnos,
+                    "publicado": cursoSeleccionado.publicado
+                }
+            ] */
         }
+    },
+    computed: {
+
     },
     methods: {
         handleConfirmModal() {

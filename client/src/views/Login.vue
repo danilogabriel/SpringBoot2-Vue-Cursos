@@ -62,7 +62,7 @@ export default {
 				let esValido = await this.$validate()
 				if (esValido) {							
 					var response = await this.$store.dispatch('login', this.userLogin)					
-					if (response.message = "PASSWORD_REQUIRED")
+					if (response.message == "PASSWORD_REQUIRED")
 						this.$router.push({name: 'acceso', params: { usuario: response.usuario} })
 						// En esta ruta, el param 'usuario' que se pasa como parametro es tomado
 						// por el componente SetPassword.vue como una props.

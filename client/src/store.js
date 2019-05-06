@@ -84,6 +84,15 @@ const store =  new Vuex.Store({
     },
 	getters : {
         cursoSeleccionado: state => state.cursoSeleccionado,
+
+        cursoSeleccionadoReducido: state => {
+            var copy = Object.assign({}, state.cursoSeleccionado)
+            delete copy.id 
+            delete copy.usuario
+            delete copy.publicado
+            return copy
+        },
+
         isLoggedIn: state => state.isLoggedIn
 
     }    

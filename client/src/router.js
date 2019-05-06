@@ -4,7 +4,6 @@ import store from './store'
 import Login from './views/Login.vue'
 import Home from './views/Home.vue'
 import DetalleCurso from './views/DetalleCurso.vue'
-import NuevoCurso from './views/NuevoCurso.vue'
 import FormCurso from './views/FormCurso.vue'
 import SetPassword from './views/SetPassword.vue'
 

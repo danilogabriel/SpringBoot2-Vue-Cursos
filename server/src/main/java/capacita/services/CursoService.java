@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service
 public class CursoService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(UsuarioService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CursoService.class);
 
     @Autowired
     private CursoRepository repoCurso;
@@ -37,18 +37,15 @@ public class CursoService {
     }
 
     public Curso saveCurso (Integer legajo, Curso cursoParam){
+        Usuario usu = null;
+        try {
+            usu = repoUsuario.findByLegajo(legajo);
+            if (usu == null) throw new UsuarioNotFoundException("Usuario legajo: " + legajo + " not found");
 
-        if (cursoParam.getId()== null) {
-            Usuario usu = null;
-            try {
-                usu = repoUsuario.findByLegajo(legajo);
-                if (usu == null) throw new UsuarioNotFoundException("Usuario legajo: " + legajo + " not found");
-
-            } catch (UsuarioNotFoundException e) {
-                LOGGER.error("Error: {}", e.getMessage());
-            }
-            cursoParam.setUsuario(usu);
+        } catch (UsuarioNotFoundException e) {
+            LOGGER.error("Error: {}", e.getMessage());
         }
+        cursoParam.setUsuario(usu);
         return repoCurso.save(cursoParam);
     }
 

@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -44,13 +43,16 @@ public class AuthController {
     @Value("${jwt.secret}")
     private String SECRET;
 
-    //@Autowired
-    //private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
     //BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     //String hashedPassword = passwordEncoder.encode(password);
 
     @PostMapping("/login")
     public ResponseEntity<ResponseLogin> login(@RequestBody RequestLogin reqLogin){
+
+        LOGGER.info("Pass: " + reqLogin.getPassword());
 
         String token;
         Usuario usuarioDB=null;
@@ -72,10 +74,17 @@ public class AuthController {
                     response.setMessage("PASSWORD_REQUIRED");
                 } else {
 
-                    response.setMessage("LOGIN_SUCCESS");
+                    String hashedPasswordDB = usuarioDB.getPassword();
+                    String hashedPasswordIngresada = passwordEncoder.encode(reqLogin.getPassword());
+
+                    if (passwordEncoder.matches(hashedPasswordDB, hashedPasswordIngresada)) {
+                        response.setMessage("LOGIN_SUCCESS");
+                        token = getJWTToken(reqLogin.getUsername());
+                        response.setToken(token);
+                    } else {
+                        response.setMessage("PASSWORD_WRONG");
+                    }
                 }
-                token = getJWTToken(reqLogin.getUsername());
-                response.setToken(token);
                 response.setUsuario(usuarioDB);
             } else {
                 LOGGER.info("Usuario inconsistente: [" + reqLogin.getUsername() + "/"+ reqLogin.getLegajo().toString() + "/" + reqLogin.getCuit().toString() + "]");
@@ -97,10 +106,12 @@ public class AuthController {
     @PostMapping("/updatepass")
     public ResponseEntity<String> updatePass(@RequestBody Map<String, String> params) {
 
+        LOGGER.info("Pass: " + params.get("password"));
+
         Integer legajo = Integer.valueOf(params.get("legajo"));
 
         String message=null;
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        //BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String hashedPassword = passwordEncoder.encode(params.get("password"));
 
         if ( usuarioService.setPassword(legajo, hashedPassword) )
@@ -168,11 +179,14 @@ class RequestLogin {
     String username;
     Integer legajo;
     Long cuit;
+    String password;
 
-    public RequestLogin (String username, Integer legajo, Long cuit) {
+
+    public RequestLogin (String username, Integer legajo, Long cuit, String password) {
         this.username = username;
         this.legajo = legajo;
         this.cuit = cuit;
+        this.password = password;
     }
     public String getUsername() {
         return username;
@@ -192,4 +206,6 @@ class RequestLogin {
     public void setCuit(Long cuit) {
         this.cuit = cuit;
     }
+    public String getPassword() {  return password;  }
+    public void setPassword(String password) { this.password = password; }
 }

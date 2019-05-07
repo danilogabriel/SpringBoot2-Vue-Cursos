@@ -41,7 +41,6 @@ const store =  new Vuex.Store({
           
 	},    
 	actions: {
-
         async login({commit}, userLogin){
             return new Promise((resolve, reject) => {
               //reject("error forzado")

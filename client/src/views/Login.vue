@@ -21,12 +21,14 @@
 					v-model="userLogin.cuit" />
 				<div class="text-danger">{{ validation.firstError('userLogin.cuit') }}</div>
 
-				<b-form-input class="mb-2 mr-2" v-if="!primerAcceso" 
-                    type="password"
-					placeholder="Contraseña"
-					required 
-					v-model="password" />
-                <div class="text-danger">{{ validation.firstError('password1') }}</div>
+				<div v-if="!primerAcceso">
+					<b-form-input class="mb-2 mr-2"
+						type="password"
+						placeholder="Contraseña"
+						required 
+						v-model="password" />
+					<div class="text-danger">{{ validation.firstError('password') }}</div>
+				</div>
 
 				<div v-if="primerAcceso">
 					<h6>Bienvenido <strong>{{  }}</strong> al registro de propuestas de Capacitación.</h6>
@@ -44,6 +46,7 @@
 						placeholder="Reingrese contraseña"
 						required 
 						v-model="password2" />
+					<div class="text-danger">{{ validation.firstError('password2') }}</div>
 				</div>
 
 				<button type="submit" class="btn btn-primary btn-block" @click="login()" >Ingresar</button>		
@@ -85,6 +88,14 @@ export default {
 						.required()
 						.length(11, 'Debe ser numérico de 11 digitos')
 						.digit();
+	  },
+      password1: function (value) {
+        return Validator.value(value).required().minLength(6);
+      },
+      'password2, password1': function (password2, password1) {
+        if (this.submitted || this.validation.isTouched('password2')) {
+          return Validator.value(password2).required().match(password1);
+        }
       }	  
     }, 	
 	methods: {
@@ -118,10 +129,13 @@ export default {
                         "password": this.password1
                     }	
 					var response = await this.$http({ method: "POST", data: params, "url": "api/auth/updatepass"})
-					this.$router.push('/')
-					
+					console.log(response)
+					this.userLogin.password = this.password1
+					console.log("se va a procesar login ...............")
+					this.procesarLogin();
+					//this.$router.push('/')
 				} catch (error) {
-					console.log("Error interno del servidor")
+					console.log("Error interno del servidor procesando primer acceso")
 				}
 			}
 
@@ -129,14 +143,17 @@ export default {
 		async procesarLogin() {
 			try {
 				var response = await this.$store.dispatch('login', this.userLogin)
+				console.log("ya ejecuto el login ...............")
+				console.log("Response luego de procesarLogin() _________________" )
+				console.log(response)
 				if (response.message == "LOGIN_SUCCESS") {
 					this.$router.push('/')
-				} else {
+				} else if (response.message == "PASSWORD_WRONG") {					
 					//---------- hubo un error en el login del backend -----
 					console.log("Error: " + response.message)
 				}
 			} catch(error) {
-				console.log("Error interno del servidor")
+				console.log("Error interno del servidor procesando Login")
 			}
 		}
 	}

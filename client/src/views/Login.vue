@@ -26,27 +26,27 @@
 						type="password"
 						placeholder="Contraseña"
 						required 
-						v-model="password" />
-					<div class="text-danger">{{ validation.firstError('password') }}</div>
+						v-model="userLogin.password" />
+					<div class="text-danger">{{ validation.firstError('userLogin.password') }}</div>
 				</div>
 
 				<div v-if="primerAcceso">
-					<h6>Bienvenido <strong>{{  }}</strong> al registro de propuestas de Capacitación.</h6>
+					<h6></h6>
 					<h6>Es tu primer ingreso y debes cargar una contraseña para poder operar.</h6>
 
 					<b-form-input class="mb-2 mr-2"
 						type="password"
 						placeholder="Contraseña"
 						required 
-						v-model="password1" />
-					<div class="text-danger">{{ validation.firstError('password1') }}</div>
+						v-model="setPassword1" />
+					<div class="text-danger">{{ validation.firstError('setPassword1') }}</div>
 
 					<b-form-input class="mb-2 mr-2"
 						type="password"
 						placeholder="Reingrese contraseña"
 						required 
-						v-model="password2" />
-					<div class="text-danger">{{ validation.firstError('password2') }}</div>
+						v-model="setPassword2" />
+					<div class="text-danger">{{ validation.firstError('setPassword2') }}</div>
 				</div>
 
 				<button type="submit" class="btn btn-primary btn-block" @click="login()" >Ingresar</button>		
@@ -61,9 +61,9 @@ export default {
 	data(){
 		return {	
 			primerAcceso: false,		
-			password: null,
-			password1: null,
-			password2: null,
+			//password: null,
+			setPassword1: null,
+			setPassword2: null,
 			userLogin: {
 				username : "dbiondi",
 				legajo : 3710681,
@@ -72,32 +72,28 @@ export default {
 			}	
     	}
 	},
-    validators: {
-      'userLogin.username' : function (value) {
-		return Validator.value(value)
-						.required()
-						.regex('^[A-Za-z]*$', 'Debe ingresar solo caracteres alfabéticos');
-	  },
-      'userLogin.legajo' : function (value) {
-		return Validator.value(value)
-						.required()
-						.integer();
-      },
-      'userLogin.cuit' : function (value) {
-		return Validator.value(value)
-						.required()
-						.length(11, 'Debe ser numérico de 11 digitos')
-						.digit();
-	  },
-      password1: function (value) {
+  validators: {
+		'userLogin.username' : function (value) {
+			return Validator.value(value).required().regex('^[A-Za-z]*$', 'Debe ingresar solo caracteres alfabéticos');
+		},
+    'userLogin.legajo' : function (value) {
+			return Validator.value(value).required().integer();
+    },
+    'userLogin.cuit' : function (value) {
+			return Validator.value(value).required().length(11, 'Debe ser numérico de 11 digitos').digit();
+		},
+    'userLogin.password' : function (value) {
+			return Validator.value(value).required().minLength(6);
+		},
+		setPassword1: function (value) {
         return Validator.value(value).required().minLength(6);
-      },
-      'password2, password1': function (password2, password1) {
-        if (this.submitted || this.validation.isTouched('password2')) {
-          return Validator.value(password2).required().match(password1);
+    },
+    'setPassword2, setPassword1': function (setPassword2, setPassword1) {
+        if (this.submitted || this.validation.isTouched('setPassword2')) {
+          return Validator.value(setPassword2).required().match(setPassword1);
         }
-      }	  
-    }, 	
+    }	  
+  }, 	
 	methods: {
 		async verificarPrimerAcceso(){
 			try {
@@ -122,18 +118,15 @@ export default {
 			}		
 		},
 		async procesarPrimerAcceso() {
-			if (this.password1==this.password2) {
+			if (this.setPassword1==this.setPassword2) {
 				try {
 					var params = { 
                         "legajo": this.userLogin.legajo, 
-                        "password": this.password1
+                        "password": this.setPassword1
                     }	
 					var response = await this.$http({ method: "POST", data: params, "url": "api/auth/updatepass"})
-					console.log(response)
-					this.userLogin.password = this.password1
-					console.log("se va a procesar login ...............")
+					this.userLogin.password = this.setPassword1
 					this.procesarLogin();
-					//this.$router.push('/')
 				} catch (error) {
 					console.log("Error interno del servidor procesando primer acceso")
 				}
@@ -143,9 +136,6 @@ export default {
 		async procesarLogin() {
 			try {
 				var response = await this.$store.dispatch('login', this.userLogin)
-				console.log("ya ejecuto el login ...............")
-				console.log("Response luego de procesarLogin() _________________" )
-				console.log(response)
 				if (response.message == "LOGIN_SUCCESS") {
 					this.$router.push('/')
 				} else if (response.message == "PASSWORD_WRONG") {					

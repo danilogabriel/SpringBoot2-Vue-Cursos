@@ -79,11 +79,8 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     private boolean existeJWTToken(HttpServletRequest request, HttpServletResponse res)
     {
-
         String authenticationHeader = request.getHeader("Authorization");
-
         if (authenticationHeader == null || !authenticationHeader.startsWith("Bearer ")) {
-            LOGGER.info("*********** Request sin token");
             return false;
         }
         return true;

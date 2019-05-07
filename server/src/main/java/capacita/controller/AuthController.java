@@ -43,28 +43,19 @@ public class AuthController {
     @Value("${jwt.secret}")
     private String SECRET;
 
-
     private BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
-    //BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-    //String hashedPassword = passwordEncoder.encode(password);
 
     @PostMapping("/login")
     public ResponseEntity<ResponseLogin> login(@RequestBody RequestLogin reqLogin){
-
-        LOGGER.info("Pass: " + reqLogin.getPassword());
-
         String token;
         Usuario usuarioDB=null;
         ResponseLogin response = new ResponseLogin(null, null , null);
-
         try{
             usuarioDB = usuarioService.findUsuarioByLegajo(reqLogin.getLegajo());
             if (usuarioDB == null) throw new Exception("Usuario legajo: " + reqLogin.getLegajo() + " not found");
         }catch(Exception e){
             LOGGER.error("Error: {}", e.getMessage());
         }
-
         if (usuarioDB == null) {
             response.setMessage("No existe usuario con legajo " + reqLogin.getLegajo());
         } else {
@@ -73,11 +64,7 @@ public class AuthController {
                 if (usuarioDB.getPassword() == null){
                     response.setMessage("PASSWORD_REQUIRED");
                 } else {
-
-                    String hashedPasswordDB = usuarioDB.getPassword();
-                    String hashedPasswordIngresada = passwordEncoder.encode(reqLogin.getPassword());
-
-                    if (passwordEncoder.matches(hashedPasswordDB, hashedPasswordIngresada)) {
+                    if (passwordEncoder.matches(reqLogin.getPassword(), usuarioDB.getPassword())) {
                         response.setMessage("LOGIN_SUCCESS");
                         token = getJWTToken(reqLogin.getUsername());
                         response.setToken(token);
@@ -102,12 +89,8 @@ public class AuthController {
         return new ResponseEntity<>(false, HttpStatus.OK);
     }
 
-
     @PostMapping("/updatepass")
     public ResponseEntity<String> updatePass(@RequestBody Map<String, String> params) {
-
-        LOGGER.info("Pass: " + params.get("password"));
-
         Integer legajo = Integer.valueOf(params.get("legajo"));
 
         String message=null;

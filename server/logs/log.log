@@ -1,276 +1,387 @@
-10-05-2019 11:08:45.322 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 6288 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
-10-05-2019 11:08:45.330 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
-10-05-2019 11:08:45.769 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1b8420fe: startup date [Fri May 10 11:08:45 ART 2019]; root of context hierarchy
-10-05-2019 11:09:02.947 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f035b28d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-10-05-2019 11:09:05.484 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-10-05-2019 11:09:05.627 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-10-05-2019 11:09:05.628 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
-10-05-2019 11:09:05.641 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
-10-05-2019 11:09:06.937 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-10-05-2019 11:09:06.939 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 21170 ms
-10-05-2019 11:09:07.551 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
-10-05-2019 11:09:07.558 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-10-05-2019 11:09:07.558 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
-10-05-2019 11:09:07.559 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
-10-05-2019 11:09:07.559 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
-10-05-2019 11:09:07.561 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
-10-05-2019 11:09:07.561 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
-10-05-2019 11:09:07.563 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
-10-05-2019 11:09:08.664 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
-10-05-2019 11:09:11.608 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
-10-05-2019 11:09:11.821 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
-10-05-2019 11:09:12.235 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+14-05-2019 15:51:46.788 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 14530 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+14-05-2019 15:51:46.796 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+14-05-2019 15:51:47.038 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@17b93365: startup date [Tue May 14 15:51:47 ART 2019]; root of context hierarchy
+14-05-2019 15:51:50.885 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5aae9101] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14-05-2019 15:51:51.627 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+14-05-2019 15:51:51.667 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+14-05-2019 15:51:51.668 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+14-05-2019 15:51:51.682 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14-05-2019 15:51:51.950 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+14-05-2019 15:51:51.950 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 4913 ms
+14-05-2019 15:51:52.202 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+14-05-2019 15:51:52.203 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14-05-2019 15:51:52.204 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14-05-2019 15:51:52.205 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+14-05-2019 15:51:52.206 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+14-05-2019 15:51:52.207 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+14-05-2019 15:51:52.208 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+14-05-2019 15:51:52.210 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+14-05-2019 15:51:52.544 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+14-05-2019 15:51:52.871 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+14-05-2019 15:51:52.964 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:51:53.025 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-10-05-2019 11:09:14.110 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
-10-05-2019 11:09:14.113 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
-10-05-2019 11:09:14.582 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
-10-05-2019 11:09:15.676 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-10-05-2019 11:09:17.392 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@6853808'
-10-05-2019 11:09:17.394 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
-10-05-2019 11:09:17.744 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
-10-05-2019 11:09:17.788 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 43 ms.
-10-05-2019 11:09:20.354 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+14-05-2019 15:51:53.227 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+14-05-2019 15:51:53.237 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+14-05-2019 15:51:53.324 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14-05-2019 15:51:53.561 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+14-05-2019 15:51:54.453 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@49ea42c0'
+14-05-2019 15:51:54.455 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:51:54.593 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+14-05-2019 15:51:54.615 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executed SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql] in 21 ms.
+14-05-2019 15:51:55.487 [restartedMain] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
 
-Using generated security password: c93f3099-6593-4fec-be22-c98bda2ed172
+Using generated security password: 9710c191-cb9a-4813-b135-93e2eace1c41
 
-10-05-2019 11:09:20.500 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
-10-05-2019 11:09:20.501 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
-10-05-2019 11:09:20.501 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
-10-05-2019 11:09:20.501 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
-10-05-2019 11:09:20.502 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
-10-05-2019 11:09:20.502 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
-10-05-2019 11:09:20.740 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-10-05-2019 11:09:20.799 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-10-05-2019 11:09:20.976 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
-10-05-2019 11:09:20.978 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/firstaccess],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> capacita.controller.AuthController.verifyPass(java.util.Map<java.lang.String, java.lang.Long>)
-10-05-2019 11:09:20.981 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
-10-05-2019 11:09:20.989 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
-10-05-2019 11:09:20.990 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
-10-05-2019 11:09:20.991 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
-10-05-2019 11:09:20.991 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
-10-05-2019 11:09:20.996 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
-10-05-2019 11:09:20.999 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
-10-05-2019 11:09:21.000 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
-10-05-2019 11:09:21.001 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
-10-05-2019 11:09:21.002 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{cuit}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorCuit(java.lang.Long)
-10-05-2019 11:09:21.048 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-10-05-2019 11:09:21.049 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-10-05-2019 11:09:21.060 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
-10-05-2019 11:09:21.205 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5887114d, org.springframework.security.web.context.SecurityContextPersistenceFilter@6681b7ee, org.springframework.security.web.header.HeaderWriterFilter@5a072d14, org.springframework.web.filter.CorsFilter@5cb70cd, org.springframework.security.web.authentication.logout.LogoutFilter@6299209c, capacita.security.JWTAuthorizationFilter@51cb4b9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c537651, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ca23072, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@335fc75a, org.springframework.security.web.session.SessionManagementFilter@20fb4d2e, org.springframework.security.web.access.ExceptionTranslationFilter@7f5f98d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c9632d1]
-10-05-2019 11:09:21.897 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1b8420fe: startup date [Fri May 10 11:08:45 ART 2019]; root of context hierarchy
-10-05-2019 11:09:23.111 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
-10-05-2019 11:09:23.153 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
-10-05-2019 11:09:23.157 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
-10-05-2019 11:09:23.165 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
-10-05-2019 11:09:23.326 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-10-05-2019 11:09:23.334 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 45.459 seconds (JVM running for 50.213)
-10-05-2019 11:09:23.342 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
-10-05-2019 11:19:42.611 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring FrameworkServlet 'dispatcherServlet'
-10-05-2019 11:19:42.612 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization started
-10-05-2019 11:19:42.634 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
-10-05-2019 11:19:42.916 [http-nio-8080-exec-1] INFO  o.h.h.i.QueryTranslatorFactoryInitiator.initiateService - HHH000397: Using ASTQueryTranslatorFactory
-10-05-2019 12:09:46.678 [http-nio-8080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
-	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.matches(BCryptPasswordEncoder.java:94)
-	at capacita.controller.AuthController.login(AuthController.java:67)
+14-05-2019 15:51:55.583 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/*'], []
+14-05-2019 15:51:55.583 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/js/*'], []
+14-05-2019 15:51:55.584 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/css/*'], []
+14-05-2019 15:51:55.584 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/api/auth/*'], []
+14-05-2019 15:51:55.585 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/favicon.ico'], []
+14-05-2019 15:51:55.585 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: Ant [pattern='/console/*'], []
+14-05-2019 15:51:55.719 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+14-05-2019 15:51:55.745 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14-05-2019 15:51:55.834 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/login],methods=[POST]}" onto public org.springframework.http.ResponseEntity<capacita.controller.ResponseLogin> capacita.controller.AuthController.login(capacita.controller.RequestLogin)
+14-05-2019 15:51:55.836 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/firstaccess],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.Boolean> capacita.controller.AuthController.verifyPass(java.util.Map<java.lang.String, java.lang.Long>)
+14-05-2019 15:51:55.838 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/auth/updatepass],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.AuthController.updatePass(java.util.Map<java.lang.String, java.lang.String>)
+14-05-2019 15:51:55.843 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/{id}],methods=[GET]}" onto public java.util.Optional<capacita.model.Curso> capacita.controller.CursoController.getCursoPorId(java.lang.Integer)
+14-05-2019 15:51:55.844 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCurso(capacita.model.Curso)
+14-05-2019 15:51:55.846 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.CursoController.createCursoPorLegajo(java.lang.Integer,capacita.model.Curso)
+14-05-2019 15:51:55.847 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/cursos/usuario/{legajo}],methods=[GET]}" onto public java.util.List<capacita.model.Curso> capacita.controller.CursoController.getCursosPorLegajo(java.lang.Integer)
+14-05-2019 15:51:55.849 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/inscripcion],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> capacita.controller.InscripcionController.createInscripcion(capacita.controller.RequestInscripcion)
+14-05-2019 15:51:55.850 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/error]}" onto public java.lang.String capacita.controller.MyErrorController.getErrorPath()
+14-05-2019 15:51:55.854 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios],methods=[GET]}" onto public java.util.List<capacita.model.Usuario> capacita.controller.UsuarioController.getUsuarios()
+14-05-2019 15:51:55.855 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{legajo}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuariosPorLegajo(java.lang.Integer)
+14-05-2019 15:51:55.856 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{username}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorMail(java.lang.String)
+14-05-2019 15:51:55.857 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping.register - Mapped "{[/api/usuarios/{cuit}],methods=[GET]}" onto public capacita.model.Usuario capacita.controller.UsuarioController.getUsuarioPorCuit(java.lang.Long)
+14-05-2019 15:51:55.901 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+14-05-2019 15:51:55.901 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping.registerHandler - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+14-05-2019 15:51:55.912 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping.<init> - Adding welcome page: class path resource [static/index.html]
+14-05-2019 15:51:55.950 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7eaa6b08, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b64fffa, org.springframework.security.web.header.HeaderWriterFilter@3020b5b5, org.springframework.web.filter.CorsFilter@3a163915, org.springframework.security.web.authentication.logout.LogoutFilter@75734e90, capacita.security.JWTAuthorizationFilter@450db604, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@57339f3c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c51d7b8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@66fe1fc9, org.springframework.security.web.session.SessionManagementFilter@3d46f1a9, org.springframework.security.web.access.ExceptionTranslationFilter@5dc0b51e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7feebbd8]
+14-05-2019 15:51:56.312 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter.initControllerAdviceCache - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@17b93365: startup date [Tue May 14 15:51:47 ART 2019]; root of context hierarchy
+14-05-2019 15:51:57.084 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+14-05-2019 15:51:57.142 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.afterSingletonsInstantiated - Registering beans for JMX exposure on startup
+14-05-2019 15:51:57.145 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.autodetect - Bean with name 'dataSource' has been autodetected for JMX exposure
+14-05-2019 15:51:57.154 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter.registerBeanInstance - Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+14-05-2019 15:51:57.214 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+14-05-2019 15:51:57.219 [restartedMain] INFO  capacita.Application.logStarted - Started Application in 11.651 seconds (JVM running for 13.014)
+14-05-2019 15:51:57.222 [restartedMain] INFO  capacita.Application.run - Aplicacion iniciada en 127.0.1.1:8080
+14-05-2019 15:52:08.743 [Thread-9] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.doClose - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@17b93365: startup date [Tue May 14 15:51:47 ART 2019]; root of context hierarchy
+14-05-2019 15:52:08.748 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.destroy - Unregistering JMX-exposed beans on shutdown
+14-05-2019 15:52:08.750 [Thread-9] INFO  o.s.j.e.a.AnnotationMBeanExporter.unregisterBeans - Unregistering JMX-exposed beans
+14-05-2019 15:52:08.753 [Thread-9] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:52:08.759 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+14-05-2019 15:52:08.781 [Thread-9] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+14-05-2019 15:54:50.316 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 14676 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+14-05-2019 15:54:50.331 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+14-05-2019 15:54:50.518 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@673c8b41: startup date [Tue May 14 15:54:50 ART 2019]; root of context hierarchy
+14-05-2019 15:54:52.683 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1863b941] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14-05-2019 15:54:53.215 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+14-05-2019 15:54:53.252 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+14-05-2019 15:54:53.253 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+14-05-2019 15:54:53.264 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14-05-2019 15:54:53.505 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+14-05-2019 15:54:53.506 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2988 ms
+14-05-2019 15:54:53.724 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+14-05-2019 15:54:53.726 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14-05-2019 15:54:53.728 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14-05-2019 15:54:53.728 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+14-05-2019 15:54:53.729 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+14-05-2019 15:54:53.731 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+14-05-2019 15:54:53.731 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+14-05-2019 15:54:53.734 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+14-05-2019 15:54:53.998 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+14-05-2019 15:54:54.268 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+14-05-2019 15:54:54.329 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:54:54.356 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14-05-2019 15:54:54.492 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+14-05-2019 15:54:54.495 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+14-05-2019 15:54:54.544 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14-05-2019 15:54:54.743 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+14-05-2019 15:54:55.760 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@1555773b'
+14-05-2019 15:54:55.763 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:54:55.899 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+14-05-2019 15:54:55.941 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'repoUsuario'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository': Cannot create inner bean '(inner bean)#3db02a40' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#3db02a40': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1) [42122-197]
+14-05-2019 15:54:55.942 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:54:55.946 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+14-05-2019 15:54:55.984 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+14-05-2019 15:54:55.990 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+14-05-2019 15:54:56.047 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14-05-2019 15:54:56.058 [restartedMain] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'repoUsuario'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository': Cannot create inner bean '(inner bean)#3db02a40' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#3db02a40': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at capacita.Application.main(Application.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at capacita.security.JWTAuthorizationFilter.doFilterInternal(JWTAuthorizationFilter.java:53)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:209)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-10-05-2019 12:13:46.058 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
-	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.matches(BCryptPasswordEncoder.java:94)
-	at capacita.controller.AuthController.login(AuthController.java:67)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository': Cannot create inner bean '(inner bean)#3db02a40' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#3db02a40': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:327)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1611)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1363)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#3db02a40': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:378)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:444)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1256)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:312)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:119)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:257)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	... 45 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:494)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:240)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:48)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:210)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:123)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:93)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:37)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:400)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:354)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:79)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:70)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.postProcessObjectFromFactoryBean(AbstractAutowireCapableBeanFactory.java:1850)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:116)
+	... 50 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idCurso) VALUES (3710681, 1) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:473)
+	... 66 common frames omitted
+14-05-2019 15:55:53.206 [restartedMain] INFO  capacita.Application.logStarting - Starting Application on danilo with PID 14820 (/home/dbiondi/dev/capacitacion/capacita/server/target/classes started by dbiondi in /home/dbiondi/dev/capacitacion/capacita/server)
+14-05-2019 15:55:53.210 [restartedMain] INFO  capacita.Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+14-05-2019 15:55:53.413 [restartedMain] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.prepareRefresh - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@699e584c: startup date [Tue May 14 15:55:53 ART 2019]; root of context hierarchy
+14-05-2019 15:55:55.426 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8dc7b171] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+14-05-2019 15:55:55.974 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+14-05-2019 15:55:56.017 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+14-05-2019 15:55:56.018 [restartedMain] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet Engine: Apache Tomcat/8.5.31
+14-05-2019 15:55:56.034 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener.log - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+14-05-2019 15:55:56.275 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+14-05-2019 15:55:56.276 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2863 ms
+14-05-2019 15:55:56.500 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'characterEncodingFilter' to: [/*]
+14-05-2019 15:55:56.501 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+14-05-2019 15:55:56.502 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+14-05-2019 15:55:56.503 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'requestContextFilter' to: [/*]
+14-05-2019 15:55:56.503 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean.configure - Mapping filter: 'springSecurityFilterChain' to: [/*]
+14-05-2019 15:55:56.508 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean.configure - Mapping filter: 'JWTAuthorizationFilter' to: [/*]
+14-05-2019 15:55:56.509 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet dispatcherServlet mapped to [/]
+14-05-2019 15:55:56.514 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean.addRegistration - Servlet webServlet mapped to [/console/*]
+14-05-2019 15:55:56.740 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+14-05-2019 15:55:56.989 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+14-05-2019 15:55:57.053 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory - Building JPA container EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:55:57.075 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+14-05-2019 15:55:57.176 [restartedMain] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.17.Final}
+14-05-2019 15:55:57.178 [restartedMain] INFO  org.hibernate.cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+14-05-2019 15:55:57.234 [restartedMain] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+14-05-2019 15:55:57.392 [restartedMain] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+14-05-2019 15:55:58.228 [restartedMain] INFO  o.h.t.s.internal.SchemaCreatorImpl.applyImportSources - HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@f7fa0ce'
+14-05-2019 15:55:58.230 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:55:58.330 [restartedMain] INFO  o.s.jdbc.datasource.init.ScriptUtils.executeSqlScript - Executing SQL script from URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]
+14-05-2019 15:55:58.346 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'repoUsuario'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository': Cannot create inner bean '(inner bean)#5fd65b8e' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5fd65b8e': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1) [42122-197]
+14-05-2019 15:55:58.347 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+14-05-2019 15:55:58.349 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+14-05-2019 15:55:58.373 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+14-05-2019 15:55:58.379 [restartedMain] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+14-05-2019 15:55:58.420 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+14-05-2019 15:55:58.430 [restartedMain] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'repoUsuario'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository': Cannot create inner bean '(inner bean)#5fd65b8e' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5fd65b8e': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1350)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at capacita.Application.main(Application.java:53)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at capacita.security.JWTAuthorizationFilter.doFilterInternal(JWTAuthorizationFilter.java:53)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:209)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-10-05-2019 12:33:39.668 [http-nio-8080-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
-	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.matches(BCryptPasswordEncoder.java:94)
-	at capacita.controller.AuthController.login(AuthController.java:67)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:209)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:136)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:877)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:783)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:991)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:925)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:974)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:877)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:851)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at capacita.security.JWTAuthorizationFilter.doFilterInternal(JWTAuthorizationFilter.java:53)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:209)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1468)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usuarioRepository': Cannot create inner bean '(inner bean)#5fd65b8e' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5fd65b8e': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:327)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1611)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1363)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:580)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#5fd65b8e': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:378)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:110)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:625)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:444)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1256)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1105)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:503)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:312)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory': Post-processing of FactoryBean's singleton object failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:119)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getObjectForBeanInstance(AbstractAutowireCapableBeanFactory.java:1184)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:257)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:367)
+	... 45 common frames omitted
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #8 of URL [file:/home/dbiondi/dev/capacitacion/capacita/server/target/classes/data.sql]: INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1); nested exception is org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1) [42122-197]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:494)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:240)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:48)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:210)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:123)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:93)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:37)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:400)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:354)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:79)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:70)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.postProcessObjectFromFactoryBean(AbstractAutowireCapableBeanFactory.java:1850)
+	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:116)
+	... 50 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLException: Columna "IDCURSO" no encontrada
+Column "IDCURSO" not found; SQL statement:
+INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1) [42122-197]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:357)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.table.Table.getColumn(Table.java:682)
+	at org.h2.command.Parser.parseColumn(Parser.java:936)
+	at org.h2.command.Parser.parseColumnList(Parser.java:920)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1258)
+	at org.h2.command.Parser.parseInsert(Parser.java:1222)
+	at org.h2.command.Parser.parsePrepared(Parser.java:431)
+	at org.h2.command.Parser.parse(Parser.java:335)
+	at org.h2.command.Parser.parse(Parser.java:307)
+	at org.h2.command.Parser.prepareCommand(Parser.java:278)
+	at org.h2.engine.Session.prepareLocal(Session.java:611)
+	at org.h2.engine.Session.prepareCommand(Session.java:549)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1247)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:473)
+	... 66 common frames omitted

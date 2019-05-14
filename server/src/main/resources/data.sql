@@ -7,5 +7,6 @@ INSERT INTO CURSO(titulo,tipo,categoria,descripcion,contenidos,instructores,perf
 INSERT INTO CURSO(titulo,tipo,categoria,descripcion,contenidos,instructores,perfil_alumno,cant_horas,max_alumnos,publicado,usuario_legajo) VALUES ('PL SQL Basico',     'Charla','DB','Primer acercamiento a PL SQL','Parte1   Parte2   Parte3','Carlos Ovin','DEV',8,5, false, 2222222);
 INSERT INTO CURSO(titulo,tipo,categoria,descripcion,contenidos,instructores,perfil_alumno,cant_horas,max_alumnos,publicado,usuario_legajo) VALUES ('Selenium',          'Taller','TEST','Conocimientos basicos de testing End to End','Parte1   Parte2   Parte3','Seba Picardi','QA',20,8, true, 3333333);
 
+INSERT INTO INSCRIPCION(legajo,idcurso) VALUES (3710681, 1);
 
 

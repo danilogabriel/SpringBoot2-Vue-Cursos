@@ -22,7 +22,7 @@
 				<div class="text-danger">{{ validation.firstError('userLogin.cuit') }}</div>
 
 				<div v-if="!primerAcceso">
-					<b-form-input class="mb-2 mr-2"
+					<b-form-input class="mb-2 mr-2" @focus="verificarPrimerAcceso()"
 						type="password"
 						placeholder="Contraseña"
 						required 

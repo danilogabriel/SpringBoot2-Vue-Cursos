@@ -21,11 +21,12 @@ public class Inscripcion implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer legajo;
-    private Integer idCurso;
 
-    public Inscripcion(Integer legajo, Integer idCurso) {
+    private Integer legajo;
+    private Integer idcurso;
+
+    public Inscripcion(Integer legajo, Integer idcurso) {
         this.legajo = legajo;
-        this.idCurso = idCurso;
+        this.idcurso = idcurso;
     }
 }

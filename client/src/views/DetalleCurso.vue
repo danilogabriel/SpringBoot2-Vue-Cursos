@@ -67,16 +67,36 @@ export default {
 
     },
     methods: {
-        handleConfirmModal() {
-            console.log("confirm")
-            
-            this.$nextTick(() => {
+        async handleConfirmModal() {
+            if (this.mailAConfirmar==this.$store.state.user.username+'@afip.gob.ar'){
+                try {
+                    var response = await this.$http({ 
+                                                method: "POST", 
+                                                data: { 
+                                                    legajo: this.$store.state.user.legajo,
+                                                    idcurso: this.$store.state.cursoSeleccionado.id
+                                                }, 
+                                                "url": "api/inscripcion"})
+                    this.hideModal()
+                    this.$bvToast.toast('Se ha registrado tu interés en el curso. Te contactaremos por email.', {
+                    title: 'Advertencia',
+                    variant: 'primary',
+                    toaster: 'b-toaster-top-center',
+                    solid: true
+                    })                 
+                    setTimeout( () => this.$router.push({ path: '/home'}), 5000);
+                } catch (error) {
+                    console.log(error)
+                }
+            } else {
+                this.$bvToast.toast('El email ingresado no coincide con su email registrado.No se ha confirmado la operación', {
+                  title: 'Advertencia',
+                  variant: 'danger',
+                  toaster: 'b-toaster-top-center',
+                  solid: true
+                })   
 
-                this.hideModal()
-                this.goToHome()
-
-            // Wrapped in $nextTick to ensure DOM is rendered before closing
-            })
+            }
         },
         showModal() {
             this.$refs['confirmacion-modal'].show()

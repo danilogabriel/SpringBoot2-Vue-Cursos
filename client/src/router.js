@@ -6,7 +6,7 @@ import Home from './views/Home.vue'
 import DetalleCurso from './views/DetalleCurso.vue'
 import FormCurso from './views/FormCurso.vue'
 import SetPassword from './views/SetPassword.vue'
-
+import Reporte from './views/Reporte.vue'
 
 Vue.use(Router)
 
@@ -55,8 +55,15 @@ const router =  new Router({
       meta: { 
         requiresAuth: true
       }      
-    }    
-
+    },
+    {
+      path: '/reporte',
+      name: 'reporte',
+      component: Reporte,
+      meta: { 
+        requiresAuth: true
+      }      
+    }  
   ]
 })
 router.beforeEach((to, from, next) => {

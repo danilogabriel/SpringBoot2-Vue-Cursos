@@ -8,6 +8,6 @@ public interface InscripcionRepository extends JpaRepository<Inscripcion, Intege
 
     public List<Inscripcion> findByLegajo(Integer legajo);
 
-    public List<Inscripcion> findByIdCurso(Integer idCurso);
+    public List<Inscripcion> findByIdcurso(Integer idCurso);
 
 }

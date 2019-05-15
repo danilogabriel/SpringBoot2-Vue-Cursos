@@ -5,7 +5,19 @@
 
         <b-row class="m-4">
             <b-col><h3>Cursos disponibles</h3></b-col>
-            <b-button align-self="end" size="lg" class="my-2 my-sm-0" type="submit" @click="goToNuevoCurso()" variant="primary">Cargar Nuevo Curso</b-button>
+            <b-button align-self="end" 
+                      variant="info" 
+                      size="md" 
+                      class="my-2 my-sm-0" 
+                      type="submit" 
+                      @click="goToReporte()" >Reporte</b-button>
+
+            <b-button align-self="end" 
+                      variant="info" 
+                      size="md" 
+                      class="my-2 my-sm-0" 
+                      type="submit" 
+                      @click="goToNuevoCurso()" >Cargar Nuevo Curso</b-button>
         </b-row>
 
         <b-container fluid>
@@ -66,6 +78,9 @@ export default {
         },
         goToNuevoCurso(){
             this.$router.push("/formcurso");            
+        },
+        goToReporte(){
+            this.$router.push("/reporte");            
         }
 
     },

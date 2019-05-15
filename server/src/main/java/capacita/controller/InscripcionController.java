@@ -1,18 +1,15 @@
 package capacita.controller;
 
-import capacita.model.Curso;
 import capacita.model.Inscripcion;
-import capacita.services.CursoService;
 import capacita.services.InscripcionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/inscripcion")
@@ -23,6 +20,11 @@ public class InscripcionController {
 
     @Autowired
     private InscripcionService inscripcionService;
+
+    @GetMapping
+    public List<Inscripcion> getAllInscripciones(){
+        return inscripcionService.getInscripciones();
+    }
 
     @PostMapping
     public ResponseEntity<String> createInscripcion(@RequestBody RequestInscripcion reqInscripcion) {
@@ -36,11 +38,11 @@ public class InscripcionController {
 class RequestInscripcion {
 
     Integer legajo;
-    Integer idCurso;
+    Integer idcurso;
 
-    public RequestInscripcion(Integer legajo, Integer idCurso) {
+    public RequestInscripcion(Integer legajo, Integer idcurso) {
         this.legajo = legajo;
-        this.idCurso = idCurso;
+        this.idcurso = idcurso;
     }
 
     public Integer getLegajo() {
@@ -52,11 +54,11 @@ class RequestInscripcion {
     }
 
     public Integer getIdCurso() {
-        return idCurso;
+        return idcurso;
     }
 
     public void setIdCurso(Integer idCurso) {
-        this.idCurso = idCurso;
+        this.idcurso = idCurso;
     }
 }
 

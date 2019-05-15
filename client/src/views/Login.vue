@@ -35,6 +35,7 @@
 					<h6>Es tu primer ingreso y debes cargar una contraseña para poder operar.</h6>
 
 					<b-form-input class="mb-2 mr-2"
+					  ref="password1Input"
 						type="password"
 						placeholder="Contraseña"
 						required 
@@ -100,6 +101,8 @@ export default {
 				var response = await this.$http({ method: "POST", data: { cuit: this.userLogin.cuit }, "url": "api/auth/firstaccess"})
 				if (response.data == true) {
 					this.primerAcceso = true
+					this.$nextTick(() => this.$refs.password1Input.focus())
+					//this.$refs.password1Input.$el.focus()
 				}
 			} catch (error) {
 				console.log(error)

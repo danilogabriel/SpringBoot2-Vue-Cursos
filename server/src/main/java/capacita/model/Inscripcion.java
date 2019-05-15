@@ -29,4 +29,5 @@ public class Inscripcion implements Serializable {
         this.legajo = legajo;
         this.idcurso = idcurso;
     }
+
 }

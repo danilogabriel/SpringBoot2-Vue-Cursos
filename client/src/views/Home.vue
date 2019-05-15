@@ -15,7 +15,7 @@
             <b-button align-self="end" 
                       variant="info" 
                       size="md" 
-                      class="my-2 my-sm-0" 
+                      class="my-2 my-sm-0 ml-2" 
                       type="submit" 
                       @click="goToNuevoCurso()" >Cargar Nuevo Curso</b-button>
         </b-row>

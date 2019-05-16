@@ -1,15 +1,26 @@
 <template>
-
 <div >
     <navigation-bar/>
+    <b-row class="m-4">
+        <b-col><h3>Reporte de Inscriptos por Curso</h3></b-col>
+        <b-button v-if="this.$store.state.user.legajo==3710681"
+                    align-self="end" 
+                    variant="primary" 
+                    size="md" 
+                    class="my-2 my-sm-0" 
+                    type="submit" 
+                    @click="goToHome()" >Volver</b-button>
 
+    </b-row>
     <h3 class="m-2">Reporte</h3>
+    
     <pre>{{ inscripcionesList }}</pre>
-    <div align="center">
+
+
+    <div class="text-center"> 
         <b-button class="m-3 width: 200px;" style="m-3 width: 200px;"  variant="primary" @click="goToHome()">Volver</b-button>
     </div>    
 </div>
-
 </template>
 
 <script>

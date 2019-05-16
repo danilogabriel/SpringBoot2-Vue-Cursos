@@ -102,7 +102,6 @@ export default {
 				if (response.data == true) {
 					this.primerAcceso = true
 					this.$nextTick(() => this.$refs.password1Input.focus())
-					//this.$refs.password1Input.$el.focus()
 				}
 			} catch (error) {
 				console.log(error)

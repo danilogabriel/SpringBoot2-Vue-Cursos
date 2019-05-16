@@ -21,17 +21,17 @@
       @ok="handleConfirmModal"
     >
       <form @submit.stop.prevent="handleSubmit">
-        <b-form-input v-model="mailAConfirmar" placeholder="Ingrese email"></b-form-input>
+        <b-form-input ref="mailInput" v-model="mailAConfirmar" placeholder="Ingrese email"></b-form-input>
+        <div class="text-danger">{{ validation.firstError('mailAConfirmar') }}</div>
       </form>
     </b-modal>
-
 </div>
-
 </template>
 
 <script>
 
 import NavigationBar from '@/components/NavigationBar.vue'
+import {Validator} from 'simple-vue-validator'
 
 export default {
     name: 'DetalleCurso',
@@ -64,7 +64,9 @@ export default {
         }
     },
     computed: {
-
+        mailDelusuario() {
+            return this.$store.state.user.username + '@afip.gob.ar'          
+        }
     },
     methods: {
         async handleConfirmModal() {
@@ -100,6 +102,7 @@ export default {
         },
         showModal() {
             this.$refs['confirmacion-modal'].show()
+            this.$nextTick(() => this.$refs.mailInput.focus())
         },
         hideModal() {
             this.$refs['confirmacion-modal'].hide()
@@ -107,6 +110,17 @@ export default {
         goToHome() {
             this.$router.push("/home");
         }
+    },
+    validators: {
+      'mailAConfirmar, mailDelusuario': function (mailAConfirmar, mailDelusuario) {
+        return Validator.custom(function () {
+          if (!Validator.isEmpty(mailAConfirmar)) {
+            if (mailAConfirmar != mailDelusuario) {
+              return 'El email ingresado no coincide con el registrado.'
+            }
+          }
+        });
+      }
     },
     components: {
         NavigationBar

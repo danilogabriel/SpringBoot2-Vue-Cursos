@@ -1,8 +1,6 @@
 package capacita.repository;
 
-import capacita.model.Curso;
 import capacita.model.Inscripcion;
-import capacita.repository.dto.CursosPorLegajoResponse;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

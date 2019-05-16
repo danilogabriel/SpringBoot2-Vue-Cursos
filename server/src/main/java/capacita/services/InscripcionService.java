@@ -1,11 +1,7 @@
 package capacita.services;
 
-import capacita.model.Curso;
 import capacita.model.Inscripcion;
-import capacita.model.Usuario;
 import capacita.repository.InscripcionRepository;
-import capacita.repository.UsuarioRepository;
-import capacita.repository.dto.CursosPorLegajoResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -174,7 +174,8 @@ export default {
       },
       'curso.maxAlumnos': function (value) {
         return Validator.value(value).required().integer();
-      }      
+      }    
+        
     },    
     methods: {
       async guardar() {

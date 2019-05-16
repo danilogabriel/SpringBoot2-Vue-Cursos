@@ -3,7 +3,6 @@ package capacita.controller;
 import capacita.model.Curso;
 import capacita.model.Inscripcion;
 import capacita.model.Usuario;
-import capacita.repository.dto.CursosPorLegajoResponse;
 import capacita.services.CursoService;
 import capacita.services.InscripcionService;
 import capacita.services.UsuarioService;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/inscripcion")
@@ -80,12 +78,6 @@ public class InscripcionController {
         Inscripcion insc = new Inscripcion(reqInscripcion.getLegajo(), reqInscripcion.getIdCurso());
         inscripcionService.saveInscripcion(insc);
         return new ResponseEntity<>(HttpStatus.CREATED);
-    }
-
-    @GetMapping("/{legajo}")
-    public ResponseEntity<List<CursosPorLegajoResponse>> getInscripcionesPorLegajo(@PathVariable("legajo") Integer legajo) {
-        List<Map<String, Object>> inscripciones = inscripcionService.getInscripcionesPorLegajo(legajo);
-        return new ResponseEntity<List<CursosPorLegajoResponse>>(HttpStatus.OK);
     }
 }
 

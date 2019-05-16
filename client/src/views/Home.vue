@@ -5,7 +5,8 @@
 
         <b-row class="m-4">
             <b-col><h3>Cursos disponibles</h3></b-col>
-            <b-button align-self="end" 
+            <b-button v-if="this.$store.state.user.legajo==3710681"
+                      align-self="end" 
                       variant="info" 
                       size="md" 
                       class="my-2 my-sm-0" 
@@ -45,9 +46,6 @@
     </div>
 </template>
 <script>
-
-//class="justify-content-md-center"                        style="max-width: 20rem;"
-
 import NavigationBar from '@/components/NavigationBar.vue'
 export default {
     data(){

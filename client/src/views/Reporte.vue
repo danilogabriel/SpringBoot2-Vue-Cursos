@@ -19,7 +19,9 @@ export default {
     mounted() {
         this.$http({
             method: "GET",
-            "url": "api/inscripcion"
+            "url": "api/inscripcion/inscriptosporcurso"
+            // "url": "api/inscripcion/cursosporlegajo"
+
         }).then(response => {
             this.inscripcionesList = response.data;
         }, error => {

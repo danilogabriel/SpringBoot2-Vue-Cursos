@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class InscripcionService {
@@ -29,11 +30,19 @@ public class InscripcionService {
         return repoInscripcion.findAll();
     }
 
-    public List<CursosPorLegajoResponse> getInscripcionesPorLegajo(Integer legajo){
+    public List<Map<String, Object>> getInscripcionesPorLegajo(Integer legajo){
         return repoInscripcion.getDistinctCursosPorLegajo(legajo);
+    }
+
+    public List<Map<String, Object>> getInscripcionesPorCurso(Integer idcurso){
+        return repoInscripcion.getDistinctLegajosPorCurso(idcurso);
     }
 
     public List<Integer> getDistinctLegajosInscriptos() {
         return repoInscripcion.getDistinctLegajosInscriptos();
+    }
+
+    public List<Integer> getDistinctCursos() {
+        return repoInscripcion.getDistinctCursos();
     }
 }

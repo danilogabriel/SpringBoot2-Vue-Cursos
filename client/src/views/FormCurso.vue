@@ -181,9 +181,7 @@ export default {
           try {
             let esValido = await this.$validate()
             if (esValido) {							
-                console.log(this.curso)
-                await this.$store.dispatch('createCurso', this.curso)
-                
+                await this.$store.dispatch('createCurso', this.curso)               
                 this.$router.push('/')
             } else {
                 this.$bvToast.toast('Hay errores en el formulario y no es posible enviar la información', {
@@ -194,7 +192,7 @@ export default {
                 })   
             }
           } catch (error) {
-            console.log(error)
+              console.log(error)
           }
       },
       handleConfirmModal() {         

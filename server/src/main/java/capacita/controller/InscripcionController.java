@@ -1,8 +1,10 @@
 package capacita.controller;
 
+import capacita.model.Curso;
 import capacita.model.Inscripcion;
 import capacita.model.Usuario;
 import capacita.repository.dto.CursosPorLegajoResponse;
+import capacita.services.CursoService;
 import capacita.services.InscripcionService;
 import capacita.services.UsuarioService;
 import org.slf4j.Logger;
@@ -14,6 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/inscripcion")
@@ -28,21 +32,44 @@ public class InscripcionController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping
-    public List<ResponseReporteInscripciones> getAllInscripciones(){
+    @Autowired
+    private CursoService cursoService;
+
+    @GetMapping("/cursosporlegajo")
+    public List<ResponseReporteInscripcionesPorLegajo> getAllInscripciones(){
 
         Usuario usuario;
-        ResponseReporteInscripciones responseObj;
+        ResponseReporteInscripcionesPorLegajo responseObj;
 
-        List<ResponseReporteInscripciones> responseList = new ArrayList<ResponseReporteInscripciones>();
+        List<ResponseReporteInscripcionesPorLegajo> responseList = new ArrayList<ResponseReporteInscripcionesPorLegajo>();
 
-        List<CursosPorLegajoResponse> listaCursosDeUnLegajo;
+        List<Map<String, Object>> listaCursosDeUnLegajo;
         List<Integer> listaLegajos = inscripcionService.getDistinctLegajosInscriptos();
 
         for (Integer legajo : listaLegajos) {
             usuario = usuarioService.findUsuarioByLegajo(legajo);
             listaCursosDeUnLegajo = inscripcionService.getInscripcionesPorLegajo(legajo);
-            responseObj = new ResponseReporteInscripciones(usuario,listaCursosDeUnLegajo);
+            responseObj = new ResponseReporteInscripcionesPorLegajo(usuario,listaCursosDeUnLegajo);
+            responseList.add(responseObj);
+        }
+        return responseList;
+    }
+
+    @GetMapping("/inscriptosporcurso")
+    public List<ResponseReporteInscripcionesPorCurso> getAllInscripcionesPorCurso(){
+
+        Curso curso;
+        ResponseReporteInscripcionesPorCurso responseObj;
+        List listaAlumnos = new ArrayList();
+        List<ResponseReporteInscripcionesPorCurso> responseList = new ArrayList<ResponseReporteInscripcionesPorCurso>();
+
+        List<Map<String, Object>> listaLegajosDeUnCurso;
+        List<Integer> listaIDsCursos = inscripcionService.getDistinctCursos();
+
+        for (Integer idcurso : listaIDsCursos) {
+            curso = cursoService.getCursoPorId(idcurso).get();
+            listaAlumnos = inscripcionService.getInscripcionesPorCurso(idcurso);
+            responseObj = new ResponseReporteInscripcionesPorCurso(curso,listaAlumnos);
             responseList.add(responseObj);
         }
         return responseList;
@@ -57,10 +84,9 @@ public class InscripcionController {
 
     @GetMapping("/{legajo}")
     public ResponseEntity<List<CursosPorLegajoResponse>> getInscripcionesPorLegajo(@PathVariable("legajo") Integer legajo) {
-        List<CursosPorLegajoResponse> inscripciones = inscripcionService.getInscripcionesPorLegajo(legajo);
+        List<Map<String, Object>> inscripciones = inscripcionService.getInscripcionesPorLegajo(legajo);
         return new ResponseEntity<List<CursosPorLegajoResponse>>(HttpStatus.OK);
     }
-
 }
 
 class RequestInscripcion {
@@ -87,31 +113,35 @@ class RequestInscripcion {
 
 
 
-class ResponseReporteInscripciones {
-
+class ResponseReporteInscripcionesPorLegajo {
     Usuario usuario;
-    List<CursosPorLegajoResponse> cursos;
+    List<Map<String, Object>> cursos;
 
-    public ResponseReporteInscripciones(Usuario usuario, List<CursosPorLegajoResponse> cursos) {
+    public ResponseReporteInscripcionesPorLegajo(Usuario usuario, List<Map<String, Object>> cursos) {
         this.usuario = usuario;
         this.cursos = cursos;
     }
-
     public Usuario getUsuario() {
         return usuario;
     }
-
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
-    public List<CursosPorLegajoResponse> getCursos() {
-        return cursos;
-    }
-
-    public void setCursos(List<CursosPorLegajoResponse> cursos) {
-        this.cursos = cursos;
-    }
+    public List<Map<String, Object>> getCursos() { return cursos; }
+    public void setCursos(List<Map<String, Object>> cursos) { this.cursos = cursos; }
 }
 
 
+class ResponseReporteInscripcionesPorCurso {
+    Curso curso;
+    List<Map<String, Object>> usuarios;
+
+    public ResponseReporteInscripcionesPorCurso(Curso curso, List<Map<String, Object>> usuarios) {
+        this.curso = curso;
+        this.usuarios = usuarios;
+    }
+    public Curso getCurso() { return curso; }
+    public void setCurso(Curso curso) { this.curso = curso; }
+    public List<Map<String, Object>> getUsuarios() { return usuarios; }
+    public void setUsuarios(List<Map<String, Object>> usuarios) { this.usuarios = usuarios; }
+}

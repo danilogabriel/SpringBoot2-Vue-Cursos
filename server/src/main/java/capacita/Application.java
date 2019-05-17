@@ -79,8 +79,6 @@ public class Application implements CommandLineRunner {
         System.out.println("===============================================");
         System.out.println(String.format("Aplicación iniciada en:  %s:%s ", ip, port));
         System.out.println("===============================================");
-
-
     }
 }
 

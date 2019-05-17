@@ -63,6 +63,9 @@ export default {
             this.cursosList = response.data;
         }, error => {
             console.error(error);
+            console.log("Logout por vencimiento de session")
+            this.$store.commit('logout')
+            //this.$router.push("/login");
         });
     },    
 

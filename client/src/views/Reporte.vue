@@ -12,10 +12,26 @@
                     @click="goToHome()" >Volver</b-button>
 
     </b-row>
-    <h3 class="m-2">Reporte</h3>
-    
-    <pre>{{ inscripcionesList }}</pre>
+    <!-------------------------------------------------------------------------------->
+    <b-table :items="inscripcionesList" :fields="fieldsCurso" >
+      
+      <template slot="inscriptos" slot-scope="row">
+        <b-button size="sm" @click="row.toggleDetails" class="mr-2">
+           Inscriptos
+        </b-button>
+      </template>
 
+      <template slot="row-details" slot-scope="row">
+        <b-card >
+            <b-table :items="row.item.usuarios" :fields="fieldsUsuario">  
+            </b-table>
+        </b-card>
+      </template>
+    </b-table>
+
+    <!---------------------------------------------------------------------------
+    <pre>{{ inscripcionesList }}</pre>
+    ------>
 
     <div class="text-center"> 
         <b-button class="m-3 width: 200px;" style="m-3 width: 200px;"  variant="primary" @click="goToHome()">Volver</b-button>
@@ -42,9 +58,22 @@ export default {
     data() {
         return {
             inscripcionesList: [],
+            fieldsCurso: [
+                { key: 'curso.titulo',       label: 'Título', sortable: true, sortDirection: 'desc' },
+                { key: 'curso.tipo',         label: 'Tipo', sortable: true, class: 'text-center' },
+                { key: 'curso.categoria',    label: 'Categoría' },
+                { key: 'curso.instructores', label: 'Instructores' },
+                { key: 'curso.perfilAlumno', label: 'Perfil' },
+                { key: 'inscriptos',         label: 'Inscriptos' }
+            ],
+            fieldsUsuario: [
+                { key: 'NOMBRE',   label: 'Nombre', sortable: true, sortDirection: 'asc' },
+                { key: 'LEGAJO',   label: 'Legajo', sortable: true, sortDirection: 'asc' },
+                { key: 'USERNAME', label: 'e-mail', formatter: value => { return value+'@afip.gob.ar' } }
+            ]
         }
     },    
-    methods: {    
+    methods: {         
       goToHome() {
           this.$router.push("/")
       }
